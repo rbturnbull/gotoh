@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gotoh-counts-rbturnbull
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/rbturnbull/gotoh_counts
+Author: Robert Turnbull
+Author-email: rob@robturnbull.com
+License: UNKNOWN
+Description: # gotoh_counts
+        Aligns two sequences and returns the number of characters which match, mismatch, open gaps or extend gaps.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
