@@ -32,7 +32,7 @@ cpdef (int, int, int, int) counts(str seqi, str seqj,
                               float gap_open = -1,
                               float gap_extend = -1):
     """
-    Perform a global sequence alignment (Needleman-Wunsch) with affine gap penalties (Gotoh) on seq and and 2. It returns a tuple with the number of characters that match, mismatch, open gaps and extend gaps.
+    Perform a global sequence alignment (Needleman-Wunsch) with affine gap penalties (Gotoh) on seqi and seqj. It returns a tuple with the number of characters that match, mismatch, open gaps and extend gaps.
     The scores/penalties are given as arguments and the defaults correspond to basic Levenshtein distance.
 
     Based almost entirely on Brent Pedersen’s nwalign: https://bitbucket.org/brentp/biostuff/
@@ -164,3 +164,39 @@ cpdef (int, int, int, int) counts(str seqi, str seqj,
         
     return match_count, mismatch_count, gap_count, extension_count
     
+
+cpdef (float) score(str seqi, str seqj,
+                              float match = 0,
+                              float mismatch = -1,
+                              float gap_open = -1,
+                              float gap_extend = -1):
+    """
+    Returns the score of a sequence alignment.
+    """
+    my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)
+    return my_counts[0]*match + my_counts[1]*mismatch + my_counts[2]*gap_open + my_counts[3]*gap_extend
+
+
+cpdef (int) nonmatches(str seqi, str seqj,
+                              float match = 0,
+                              float mismatch = -1,
+                              float gap_open = -1,
+                              float gap_extend = -1):
+    """
+    Returns the number of different characters that do not match.
+    """
+    my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)
+    return my_counts[1] + my_counts[2] + my_counts[3]
+
+
+cpdef (float) weighted_nonmatches(str seqi, str seqj,
+                              float match = 0,
+                              float mismatch = -1,
+                              float gap_open = -1,
+                              float gap_extend = -1):
+    """
+    Returns the number of different characters that do not match, multiplied by the negative weight for each category.
+    """
+    my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)
+    return -(my_counts[1]*mismatch + my_counts[2]*gap_open + my_counts[3]*gap_extend)
+
