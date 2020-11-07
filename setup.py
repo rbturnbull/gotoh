@@ -1,8 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import numpy
 import setuptools
 from setuptools import setup, Extension
+
+# Need to install cython and numpy for extensions to work.
+# See here: https://luminousmen.com/post/resolve-cython-and-numpy-dependencies
+# and here: https://github.com/pypa/pip/issues/5761
+from setuptools import dist
+dist.Distribution().fetch_build_eggs(['Cython>=0.15.1', 'numpy>=1.10'])
+
+import numpy
 from Cython.Build import cythonize
 
 with open("README.md", "r") as fh:
@@ -20,7 +27,7 @@ setup(
         'gotoh_counts.gotoh_counts', 
         ['gotoh_counts/gotoh_counts.c'],
         include_dirs=[numpy.get_include()]),
-        ],
+    ],
     name="gotoh_counts-rbturnbull",
     version="0.0.2",
     author="Robert Turnbull",
