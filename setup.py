@@ -15,7 +15,7 @@ from Cython.Build import cythonize
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-cythonize("gotoh_counts/*.pyx", include_path=[numpy.get_include()])
+cythonize("gotoh/*.pyx", include_path=[numpy.get_include()])
 
 setup(
     install_requires=[
@@ -27,18 +27,18 @@ setup(
         'cython',
     ],
     ext_modules=[Extension(
-        'gotoh_counts.gotoh_counts', 
-        ['gotoh_counts/gotoh_counts.c'],
+        'gotoh.gotoh', 
+        ['gotoh/gotoh.c'],
         include_dirs=[numpy.get_include()]),
     ],
-    name="gotoh_counts",
-    version="0.0.3",
+    name="gotoh",
+    version="0.0.4",
     author="Robert Turnbull",
     author_email="rob@robturnbull.com",
     description="Aligns two sequences and returns the number of characters which match, mismatch, open gaps or extend gaps.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/rbturnbull/gotoh_counts",
+    url="https://github.com/rbturnbull/gotoh",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

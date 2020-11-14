@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
-import gotoh_counts
+import gotoh
 import Levenshtein
 
 
@@ -9,7 +9,7 @@ import Levenshtein
 
 class GotohCountsTest(unittest.TestCase):
     def setUp(self):
-        self.counts = gotoh_counts.counts
+        self.counts = gotoh.counts
     
     def levenshtein( self, string1, string2 ):
         g = self.counts( string1, string2 )

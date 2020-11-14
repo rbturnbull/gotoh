@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
-from gotoh_counts import align
+from gotoh import msa
 import numpy as np
 
 
@@ -23,7 +23,7 @@ class GotohMSATest(unittest.TestCase):
         ]
 
 
-        alignment = align(x,y, gap_open=0.0)
+        alignment = msa(x,y, gap_open=0.0)
 
         np.testing.assert_array_equal( alignment, gold )
         
@@ -42,7 +42,7 @@ class GotohMSATest(unittest.TestCase):
         ]
 
 
-        alignment = align(x,y, gap_open=0.0)
+        alignment = msa(x,y, gap_open=0.0)
 
         np.testing.assert_array_equal( alignment, gold )
         
@@ -57,7 +57,7 @@ class GotohMSATest(unittest.TestCase):
             [4,3,4],
         ]
 
-        alignment = align(x,y, gap_open=0.0)
+        alignment = msa(x,y, gap_open=0.0)
         np.testing.assert_array_equal( alignment, gold )
         
     def test_alignment_to_alignment( self ):
@@ -71,7 +71,7 @@ class GotohMSATest(unittest.TestCase):
             [ 4,   3, -1, -1 ]
             ]
 
-        alignment = align(x,y, gap_open=0.0)
+        alignment = msa(x,y, gap_open=0.0)
         np.testing.assert_array_equal( alignment, gold )
         
 

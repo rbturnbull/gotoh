@@ -206,7 +206,7 @@ cpdef (float) weighted_nonmatches(str seqi, str seqj,
 
 @cython.boundscheck(False)
 @cython.nonecheck(False)
-def align(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):
+def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):
     """
     perform a global sequence alignment (needleman-wunsch) for multiple sequences
     """
