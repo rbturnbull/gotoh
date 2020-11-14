@@ -19,6 +19,8 @@ cdef extern from "Python.h":
 
 cimport cython
 
+ctypedef np.int_t DTYPE_t
+
 ctypedef np.int_t DTYPE_INT
 ctypedef np.uint_t DTYPE_UINT
 ctypedef np.int8_t DTYPE_BOOL
@@ -200,3 +202,169 @@ cpdef (float) weighted_nonmatches(str seqi, str seqj,
     my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)
     return -(my_counts[1]*mismatch + my_counts[2]*gap_open + my_counts[3]*gap_extend)
 
+
+
+@cython.boundscheck(False)
+@cython.nonecheck(False)
+def align(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):
+    """
+    perform a global sequence alignment (needleman-wunsch) for multiple sequences
+    """
+    cdef bint flip = 0
+    
+    cdef size_t max_j = seqj.shape[0]
+    cdef size_t max_i = seqi.shape[0]
+    if max_i == max_j == 0:
+        return None
+
+    if max_j > max_i:
+        flip = 1
+        seqi, seqj = seqj, seqi
+        max_i, max_j = max_j, max_i
+
+
+    # need to initialize j for the case when it's a zero-length string.
+    cdef size_t i = 0, j = 0, seqlen, p
+    cdef float diag_score, up_score, left_score, tscore
+
+    #cdef np.ndarray[DTYPE_t, ndim=1] ci, cj
+    cdef int zero=0, one=1
+
+    assert gap_extend <= 0, "gap_extend penalty must be <= 0"
+    assert gap_open <= 0, "gap_open must be <= 0"
+
+    cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_i = np.ones((max_i + 1,), dtype=np.int8)
+    cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_j = np.ones((max_j + 1,), dtype=np.int8)
+
+    cdef np.ndarray[np.float32_t, ndim=2] score = np.empty((max_i + 1, max_j + 1), dtype=np.float32)
+    cdef np.ndarray[DTYPE_UINT, ndim=2] pointer = np.empty((max_i + 1, max_j + 1), dtype=np.uint)
+
+    cdef np.ndarray[np.float32_t, ndim=2] scoring_matrix = matrix
+  
+    pointer[0, 0] = NONE
+    score[0, 0] = 0
+    
+    pointer[0, 1:] = LEFT
+    pointer[1:, 0] = UP
+
+    score[0, 1:] = gap_open + gap_extend * np.arange(0, max_j, dtype=np.float32)
+    score[1:, 0] = gap_open + gap_extend * np.arange(0, max_i, dtype=np.float32)
+
+    agap_i[0] = zero
+
+    for i in range(1, max_i + 1):
+        ci = set(seqi[<size_t>(i - 1)])
+
+        agap_j[0] = zero
+        for j in range(1, max_j + 1):
+            agap_j[j] = one
+            cj = set(seqj[<size_t>(j - 1)])
+
+            if matrix is None:
+                tscore = 1 if (ci & cj) else -1 # Most basic function
+            else:
+                tscore = np.NINF
+                for token_i in ci:
+                    for token_j in cj:
+                        if token_i >= token_j:
+                            myscore = scoring_matrix[ token_i,token_j ]
+                        else:
+                            myscore = scoring_matrix[ token_j,token_i ]
+                        
+                        tscore = max(tscore,myscore)
+
+
+            diag_score = score[<size_t>(i - 1), <size_t>(j - 1)] + tscore
+            up_score   = score[<size_t>(i - 1), j] + (gap_open if agap_i[<size_t>(i - 1)] == zero else gap_extend)
+            left_score = score[i, <size_t>(j - 1)] + (gap_open if agap_j[<size_t>(j - 1)] == zero else gap_extend)
+
+            """
+            fix cases where scores are tied.
+            choose diagonal when not at the ends of either string.
+            and choose up/left (gap) when at the end of the string.
+            this forces gaps to the ends of the aligments.
+            """
+            if diag_score == left_score:
+                # so here. if we're at the end we choose a gap.
+                # otherwise, we choose diag
+                if i == max_i or i == 1:
+                    score[i, j] = left_score
+                    pointer[i, j] = LEFT
+                else: # we want a diagonal
+                    score[i, j] = diag_score
+                    pointer[i, j] = DIAG
+                    agap_i[i] = zero
+            elif diag_score == up_score:
+                if j == max_j or j == 1:
+                    score[i, j] = up_score
+                    pointer[i, j] = UP
+                else: # we want a diagonal
+                    score[i, j] = diag_score
+                    pointer[i, j] = DIAG
+                    agap_i[i] = zero
+            # end of ambiguous score checks.
+
+            elif up_score > diag_score: #checked.
+                if up_score > left_score:
+                    score[i, j]  = up_score
+                    pointer[i, j] = UP
+                else:
+                    score[i, j]   = left_score
+                    pointer[i, j] = LEFT
+            elif diag_score > up_score:
+                if left_score > diag_score:
+                    score[i, j] = left_score
+                    pointer[i, j] = LEFT
+                else:
+                    score[i, j] = diag_score
+                    pointer[i, j] = DIAG
+                    agap_i[i] = zero
+
+    seqlen = max_i + max_j
+    if visualize:
+        import matplotlib.pyplot as plt
+        fig, ax = plt.subplots()
+        im = ax.imshow(score, cmap=plt.get_cmap('hot'))
+        fig.colorbar(im)
+        plt.show()
+
+    cdef size_t depth_i =  seqi.shape[1]
+    cdef size_t depth_j =  seqj.shape[1]
+
+    cdef int score_max #, = score[:, -1].max()
+    cdef np.ndarray[DTYPE_INT, ndim=2] alignment = np.empty((seqlen, depth_i + depth_j), dtype=np.int)
+    
+    cdef int alignment_index = seqlen - 1
+
+    cdef int GAP = -1
+    p = pointer[i, j]
+
+    if flip:
+        indexes_i = np.arange(depth_i)
+        indexes_j = np.arange(depth_i,depth_i+depth_j)
+    else:
+        indexes_j = np.arange(depth_j)
+        indexes_i = np.arange(depth_j,depth_i+depth_j)
+
+    while p != NONE:
+        if p == DIAG:
+            i -= 1
+            j -= 1
+
+            alignment[alignment_index,indexes_i] = seqi[i,:]
+            alignment[alignment_index,indexes_j] = seqj[j,:]
+        elif p == LEFT:
+            j -= 1
+
+            alignment[alignment_index,indexes_i] = GAP
+            alignment[alignment_index,indexes_j] = seqj[j,:]
+        elif p == UP:
+            i -= 1
+            alignment[alignment_index,indexes_i] = seqi[i,:]
+            alignment[alignment_index,indexes_j] = GAP
+        else:
+            raise Exception('Error with pointer: %i', p)
+        alignment_index -= 1
+        p = pointer[i, j]
+
+    return alignment[alignment_index+1:,:]

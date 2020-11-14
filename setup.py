@@ -18,6 +18,9 @@ with open("README.md", "r") as fh:
 cythonize("gotoh_counts/*.pyx", include_path=[numpy.get_include()])
 
 setup(
+    install_requires=[
+        'numpy',
+    ],
     setup_requires=[
         # Setuptools 18.0 properly handles Cython extensions.
         'setuptools>=18.0',
@@ -28,8 +31,8 @@ setup(
         ['gotoh_counts/gotoh_counts.c'],
         include_dirs=[numpy.get_include()]),
     ],
-    name="gotoh_counts-rbturnbull",
-    version="0.0.2",
+    name="gotoh_counts",
+    version="0.0.3",
     author="Robert Turnbull",
     author_email="rob@robturnbull.com",
     description="Aligns two sequences and returns the number of characters which match, mismatch, open gaps or extend gaps.",

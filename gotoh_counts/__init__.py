@@ -1,1 +1,1 @@
-from .gotoh_counts import score, counts, nonmatches, weighted_nonmatches
+from .gotoh_counts import score, counts, nonmatches, weighted_nonmatches, align

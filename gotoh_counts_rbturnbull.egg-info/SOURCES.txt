@@ -1,8 +1,0 @@
-README.md
-setup.py
-gotoh_counts/__init__.py
-gotoh_counts/gotoh_counts.c
-gotoh_counts_rbturnbull.egg-info/PKG-INFO
-gotoh_counts_rbturnbull.egg-info/SOURCES.txt
-gotoh_counts_rbturnbull.egg-info/dependency_links.txt
-gotoh_counts_rbturnbull.egg-info/top_level.txt
