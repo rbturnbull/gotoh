@@ -4,12 +4,12 @@
 {
     "distutils": {
         "depends": [],
-        "name": "gotoh_counts.gotoh_counts",
+        "name": "gotoh.gotoh",
         "sources": [
-            "gotoh_counts/gotoh_counts.pyx"
+            "gotoh/gotoh.pyx"
         ]
     },
-    "module_name": "gotoh_counts.gotoh_counts"
+    "module_name": "gotoh.gotoh"
 }
 END: Cython Metadata */
 
@@ -615,8 +615,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__gotoh_counts__gotoh_counts
-#define __PYX_HAVE_API__gotoh_counts__gotoh_counts
+#define __PYX_HAVE__gotoh__gotoh
+#define __PYX_HAVE_API__gotoh__gotoh
 /* Early includes */
 #include <string.h>
 #include <stdio.h>
@@ -856,7 +856,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "gotoh_counts/gotoh_counts.pyx",
+  "gotoh/gotoh.pyx",
   "venv/lib/python3.8/site-packages/numpy/__init__.pxd",
   ".eggs/Cython-0.29.21-py3.8-macosx-10.15-x86_64.egg/Cython/Includes/cpython/type.pxd",
 };
@@ -1086,41 +1086,41 @@ typedef npy_double __pyx_t_5numpy_double_t;
  */
 typedef npy_longdouble __pyx_t_5numpy_longdouble_t;
 
-/* "gotoh_counts/gotoh_counts.pyx":22
+/* "gotoh/gotoh.pyx":22
  * cimport cython
  * 
  * ctypedef np.int_t DTYPE_t             # <<<<<<<<<<<<<<
  * 
  * ctypedef np.int_t DTYPE_INT
  */
-typedef __pyx_t_5numpy_int_t __pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t;
+typedef __pyx_t_5numpy_int_t __pyx_t_5gotoh_5gotoh_DTYPE_t;
 
-/* "gotoh_counts/gotoh_counts.pyx":24
+/* "gotoh/gotoh.pyx":24
  * ctypedef np.int_t DTYPE_t
  * 
  * ctypedef np.int_t DTYPE_INT             # <<<<<<<<<<<<<<
  * ctypedef np.uint_t DTYPE_UINT
  * ctypedef np.int8_t DTYPE_BOOL
  */
-typedef __pyx_t_5numpy_int_t __pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_INT;
+typedef __pyx_t_5numpy_int_t __pyx_t_5gotoh_5gotoh_DTYPE_INT;
 
-/* "gotoh_counts/gotoh_counts.pyx":25
+/* "gotoh/gotoh.pyx":25
  * 
  * ctypedef np.int_t DTYPE_INT
  * ctypedef np.uint_t DTYPE_UINT             # <<<<<<<<<<<<<<
  * ctypedef np.int8_t DTYPE_BOOL
  * 
  */
-typedef __pyx_t_5numpy_uint_t __pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT;
+typedef __pyx_t_5numpy_uint_t __pyx_t_5gotoh_5gotoh_DTYPE_UINT;
 
-/* "gotoh_counts/gotoh_counts.pyx":26
+/* "gotoh/gotoh.pyx":26
  * ctypedef np.int_t DTYPE_INT
  * ctypedef np.uint_t DTYPE_UINT
  * ctypedef np.int8_t DTYPE_BOOL             # <<<<<<<<<<<<<<
  * 
  * cdef size_t UP = 1, LEFT = 2, DIAG = 3, NONE = 4
  */
-typedef __pyx_t_5numpy_int8_t __pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL;
+typedef __pyx_t_5numpy_int8_t __pyx_t_5gotoh_5gotoh_DTYPE_BOOL;
 /* Declarations.proto */
 #if CYTHON_CCOMPLEX
   #ifdef __cplusplus
@@ -1185,12 +1185,12 @@ typedef npy_clongdouble __pyx_t_5numpy_clongdouble_t;
 typedef npy_cdouble __pyx_t_5numpy_complex_t;
 struct __pyx_ctuple_int__and_int__and_int__and_int;
 typedef struct __pyx_ctuple_int__and_int__and_int__and_int __pyx_ctuple_int__and_int__and_int__and_int;
-struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_counts;
-struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_score;
-struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_nonmatches;
-struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_weighted_nonmatches;
+struct __pyx_opt_args_5gotoh_5gotoh_counts;
+struct __pyx_opt_args_5gotoh_5gotoh_score;
+struct __pyx_opt_args_5gotoh_5gotoh_nonmatches;
+struct __pyx_opt_args_5gotoh_5gotoh_weighted_nonmatches;
 
-/* "gotoh_counts/gotoh_counts.pyx":31
+/* "gotoh/gotoh.pyx":31
  * 
  * 
  * cpdef (int, int, int, int) counts(str seqi, str seqj,             # <<<<<<<<<<<<<<
@@ -1203,7 +1203,7 @@ struct __pyx_ctuple_int__and_int__and_int__and_int {
   int f2;
   int f3;
 };
-struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_counts {
+struct __pyx_opt_args_5gotoh_5gotoh_counts {
   int __pyx_n;
   float match;
   float mismatch;
@@ -1211,14 +1211,14 @@ struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_counts {
   float gap_extend;
 };
 
-/* "gotoh_counts/gotoh_counts.pyx":170
+/* "gotoh/gotoh.pyx":170
  * 
  * 
  * cpdef (float) score(str seqi, str seqj,             # <<<<<<<<<<<<<<
  *                               float match = 0,
  *                               float mismatch = -1,
  */
-struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_score {
+struct __pyx_opt_args_5gotoh_5gotoh_score {
   int __pyx_n;
   float match;
   float mismatch;
@@ -1226,14 +1226,14 @@ struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_score {
   float gap_extend;
 };
 
-/* "gotoh_counts/gotoh_counts.pyx":182
+/* "gotoh/gotoh.pyx":182
  * 
  * 
  * cpdef (int) nonmatches(str seqi, str seqj,             # <<<<<<<<<<<<<<
  *                               float match = 0,
  *                               float mismatch = -1,
  */
-struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_nonmatches {
+struct __pyx_opt_args_5gotoh_5gotoh_nonmatches {
   int __pyx_n;
   float match;
   float mismatch;
@@ -1241,14 +1241,14 @@ struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_nonmatches {
   float gap_extend;
 };
 
-/* "gotoh_counts/gotoh_counts.pyx":194
+/* "gotoh/gotoh.pyx":194
  * 
  * 
  * cpdef (float) weighted_nonmatches(str seqi, str seqj,             # <<<<<<<<<<<<<<
  *                               float match = 0,
  *                               float mismatch = -1,
  */
-struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_weighted_nonmatches {
+struct __pyx_opt_args_5gotoh_5gotoh_weighted_nonmatches {
   int __pyx_n;
   float match;
   float mismatch;
@@ -1841,26 +1841,26 @@ static PyTypeObject *__pyx_ptype_5numpy_ufunc = 0;
 
 /* Module declarations from 'cython' */
 
-/* Module declarations from 'gotoh_counts.gotoh_counts' */
-static size_t __pyx_v_12gotoh_counts_12gotoh_counts_UP;
-static size_t __pyx_v_12gotoh_counts_12gotoh_counts_LEFT;
-static size_t __pyx_v_12gotoh_counts_12gotoh_counts_DIAG;
-static size_t __pyx_v_12gotoh_counts_12gotoh_counts_NONE;
-static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12gotoh_counts_counts(PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_counts *__pyx_optional_args); /*proto*/
-static float __pyx_f_12gotoh_counts_12gotoh_counts_score(PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_score *__pyx_optional_args); /*proto*/
-static int __pyx_f_12gotoh_counts_12gotoh_counts_nonmatches(PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_nonmatches *__pyx_optional_args); /*proto*/
-static float __pyx_f_12gotoh_counts_12gotoh_counts_weighted_nonmatches(PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_weighted_nonmatches *__pyx_optional_args); /*proto*/
-static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL = { "DTYPE_BOOL", NULL, sizeof(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL), { 0 }, 0, IS_UNSIGNED(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL), 0 };
+/* Module declarations from 'gotoh.gotoh' */
+static size_t __pyx_v_5gotoh_5gotoh_UP;
+static size_t __pyx_v_5gotoh_5gotoh_LEFT;
+static size_t __pyx_v_5gotoh_5gotoh_DIAG;
+static size_t __pyx_v_5gotoh_5gotoh_NONE;
+static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_5gotoh_5gotoh_counts(PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_5gotoh_5gotoh_counts *__pyx_optional_args); /*proto*/
+static float __pyx_f_5gotoh_5gotoh_score(PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_5gotoh_5gotoh_score *__pyx_optional_args); /*proto*/
+static int __pyx_f_5gotoh_5gotoh_nonmatches(PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_5gotoh_5gotoh_nonmatches *__pyx_optional_args); /*proto*/
+static float __pyx_f_5gotoh_5gotoh_weighted_nonmatches(PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_5gotoh_5gotoh_weighted_nonmatches *__pyx_optional_args); /*proto*/
+static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_BOOL = { "DTYPE_BOOL", NULL, sizeof(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL), { 0 }, 0, IS_UNSIGNED(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_float = { "float", NULL, sizeof(float), { 0 }, 0, 'R', 0, 0 };
-static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT = { "DTYPE_UINT", NULL, sizeof(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT), { 0 }, 0, IS_UNSIGNED(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT), 0 };
-static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t = { "DTYPE_t", NULL, sizeof(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t), 0 };
+static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_UINT = { "DTYPE_UINT", NULL, sizeof(__pyx_t_5gotoh_5gotoh_DTYPE_UINT), { 0 }, 0, IS_UNSIGNED(__pyx_t_5gotoh_5gotoh_DTYPE_UINT) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5gotoh_5gotoh_DTYPE_UINT), 0 };
+static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_t = { "DTYPE_t", NULL, sizeof(__pyx_t_5gotoh_5gotoh_DTYPE_t), { 0 }, 0, IS_UNSIGNED(__pyx_t_5gotoh_5gotoh_DTYPE_t) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5gotoh_5gotoh_DTYPE_t), 0 };
 static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5numpy_float32_t = { "float32_t", NULL, sizeof(__pyx_t_5numpy_float32_t), { 0 }, 0, 'R', 0, 0 };
-static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_INT = { "DTYPE_INT", NULL, sizeof(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_INT), { 0 }, 0, IS_UNSIGNED(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_INT) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_INT), 0 };
-#define __Pyx_MODULE_NAME "gotoh_counts.gotoh_counts"
-extern int __pyx_module_is_main_gotoh_counts__gotoh_counts;
-int __pyx_module_is_main_gotoh_counts__gotoh_counts = 0;
+static __Pyx_TypeInfo __Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_INT = { "DTYPE_INT", NULL, sizeof(__pyx_t_5gotoh_5gotoh_DTYPE_INT), { 0 }, 0, IS_UNSIGNED(__pyx_t_5gotoh_5gotoh_DTYPE_INT) ? 'U' : 'I', IS_UNSIGNED(__pyx_t_5gotoh_5gotoh_DTYPE_INT), 0 };
+#define __Pyx_MODULE_NAME "gotoh.gotoh"
+extern int __pyx_module_is_main_gotoh__gotoh;
+int __pyx_module_is_main_gotoh__gotoh = 0;
 
-/* Implementation of 'gotoh_counts.gotoh_counts' */
+/* Implementation of 'gotoh.gotoh' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ImportError;
 static const char __pyx_k_i[] = "i";
@@ -1876,6 +1876,7 @@ static const char __pyx_k_GAP[] = "GAP";
 static const char __pyx_k_fig[] = "fig";
 static const char __pyx_k_hot[] = "hot";
 static const char __pyx_k_int[] = "int";
+static const char __pyx_k_msa[] = "msa";
 static const char __pyx_k_one[] = "one";
 static const char __pyx_k_plt[] = "plt";
 static const char __pyx_k_NINF[] = "NINF";
@@ -1891,7 +1892,6 @@ static const char __pyx_k_show[] = "show";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_uint[] = "uint";
 static const char __pyx_k_zero[] = "zero";
-static const char __pyx_k_align[] = "align";
 static const char __pyx_k_dtype[] = "dtype";
 static const char __pyx_k_empty[] = "empty";
 static const char __pyx_k_match[] = "match";
@@ -1931,17 +1931,17 @@ static const char __pyx_k_diag_score[] = "diag_score";
 static const char __pyx_k_gap_extend[] = "gap_extend";
 static const char __pyx_k_left_score[] = "left_score";
 static const char __pyx_k_ImportError[] = "ImportError";
+static const char __pyx_k_gotoh_gotoh[] = "gotoh.gotoh";
 static const char __pyx_k_faulthandler[] = "faulthandler";
 static const char __pyx_k_scoring_matrix[] = "scoring_matrix";
 static const char __pyx_k_alignment_index[] = "alignment_index";
+static const char __pyx_k_gotoh_gotoh_pyx[] = "gotoh/gotoh.pyx";
 static const char __pyx_k_matplotlib_pyplot[] = "matplotlib.pyplot";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_gap_open_must_be_0[] = "gap_open must be <= 0";
 static const char __pyx_k_Error_with_pointer_i[] = "Error with pointer: %i";
 static const char __pyx_k_Bad_Pointer_pointer_i[] = "Bad Pointer!:pointer: %i";
-static const char __pyx_k_gotoh_counts_gotoh_counts[] = "gotoh_counts.gotoh_counts";
 static const char __pyx_k_gap_extend_penalty_must_be_0[] = "gap_extend penalty must be <= 0";
-static const char __pyx_k_gotoh_counts_gotoh_counts_pyx[] = "gotoh_counts/gotoh_counts.pyx";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
 static PyObject *__pyx_kp_u_Bad_Pointer_pointer_i;
@@ -1952,7 +1952,6 @@ static PyObject *__pyx_n_s_NINF;
 static PyObject *__pyx_n_s__4;
 static PyObject *__pyx_n_s_agap_i;
 static PyObject *__pyx_n_s_agap_j;
-static PyObject *__pyx_n_s_align;
 static PyObject *__pyx_n_s_alignment;
 static PyObject *__pyx_n_s_alignment_index;
 static PyObject *__pyx_n_s_arange;
@@ -1977,8 +1976,8 @@ static PyObject *__pyx_kp_u_gap_extend_penalty_must_be_0;
 static PyObject *__pyx_n_s_gap_open;
 static PyObject *__pyx_kp_u_gap_open_must_be_0;
 static PyObject *__pyx_n_s_get_cmap;
-static PyObject *__pyx_n_s_gotoh_counts_gotoh_counts;
-static PyObject *__pyx_kp_s_gotoh_counts_gotoh_counts_pyx;
+static PyObject *__pyx_n_s_gotoh_gotoh;
+static PyObject *__pyx_kp_s_gotoh_gotoh_pyx;
 static PyObject *__pyx_n_u_hot;
 static PyObject *__pyx_n_s_i;
 static PyObject *__pyx_n_s_im;
@@ -1997,6 +1996,7 @@ static PyObject *__pyx_n_s_matrix;
 static PyObject *__pyx_n_s_max_i;
 static PyObject *__pyx_n_s_max_j;
 static PyObject *__pyx_n_s_mismatch;
+static PyObject *__pyx_n_s_msa;
 static PyObject *__pyx_n_s_myscore;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_np;
@@ -2025,11 +2025,11 @@ static PyObject *__pyx_n_s_uint;
 static PyObject *__pyx_n_s_up_score;
 static PyObject *__pyx_n_s_visualize;
 static PyObject *__pyx_n_s_zero;
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_counts(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend); /* proto */
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_2score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend); /* proto */
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_4nonmatches(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend); /* proto */
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_6weighted_nonmatches(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend); /* proto */
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_seqj, PyArrayObject *__pyx_v_seqi, float __pyx_v_gap_open, float __pyx_v_gap_extend, PyObject *__pyx_v_matrix, int __pyx_v_visualize); /* proto */
+static PyObject *__pyx_pf_5gotoh_5gotoh_counts(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend); /* proto */
+static PyObject *__pyx_pf_5gotoh_5gotoh_2score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend); /* proto */
+static PyObject *__pyx_pf_5gotoh_5gotoh_4nonmatches(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend); /* proto */
+static PyObject *__pyx_pf_5gotoh_5gotoh_6weighted_nonmatches(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend); /* proto */
+static PyObject *__pyx_pf_5gotoh_5gotoh_8msa(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_seqj, PyArrayObject *__pyx_v_seqi, float __pyx_v_gap_open, float __pyx_v_gap_extend, PyObject *__pyx_v_matrix, int __pyx_v_visualize); /* proto */
 static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_slice_;
@@ -2042,7 +2042,7 @@ static PyObject *__pyx_tuple__8;
 static PyObject *__pyx_codeobj__9;
 /* Late includes */
 
-/* "gotoh_counts/gotoh_counts.pyx":31
+/* "gotoh/gotoh.pyx":31
  * 
  * 
  * cpdef (int, int, int, int) counts(str seqi, str seqj,             # <<<<<<<<<<<<<<
@@ -2050,8 +2050,8 @@ static PyObject *__pyx_codeobj__9;
  *                               float mismatch = -1,
  */
 
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_1counts(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12gotoh_counts_counts(PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_counts *__pyx_optional_args) {
+static PyObject *__pyx_pw_5gotoh_5gotoh_1counts(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_5gotoh_5gotoh_counts(PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_5gotoh_5gotoh_counts *__pyx_optional_args) {
   float __pyx_v_match = ((float)0.0);
   float __pyx_v_mismatch = ((float)-1.0);
   float __pyx_v_gap_open = ((float)-1.0);
@@ -2157,7 +2157,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_pybuffernd_pointer.data = NULL;
   __pyx_pybuffernd_pointer.rcbuffer = &__pyx_pybuffer_pointer;
 
-  /* "gotoh_counts/gotoh_counts.pyx":42
+  /* "gotoh/gotoh.pyx":42
  *     Based almost entirely on Brent Pedersens nwalign: https://bitbucket.org/brentp/biostuff/
  *     """
  *     cdef bint flip = 0             # <<<<<<<<<<<<<<
@@ -2166,7 +2166,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
   __pyx_v_flip = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":44
+  /* "gotoh/gotoh.pyx":44
  *     cdef bint flip = 0
  * 
  *     cdef size_t max_j = len(seqj)             # <<<<<<<<<<<<<<
@@ -2180,7 +2180,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_t_1 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_seqj); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 44, __pyx_L1_error)
   __pyx_v_max_j = __pyx_t_1;
 
-  /* "gotoh_counts/gotoh_counts.pyx":45
+  /* "gotoh/gotoh.pyx":45
  * 
  *     cdef size_t max_j = len(seqj)
  *     cdef size_t max_i = len(seqi)             # <<<<<<<<<<<<<<
@@ -2194,7 +2194,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_t_1 = __Pyx_PyUnicode_GET_LENGTH(__pyx_v_seqi); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 45, __pyx_L1_error)
   __pyx_v_max_i = __pyx_t_1;
 
-  /* "gotoh_counts/gotoh_counts.pyx":46
+  /* "gotoh/gotoh.pyx":46
  *     cdef size_t max_j = len(seqj)
  *     cdef size_t max_i = len(seqi)
  *     if max_i == max_j == 0:             # <<<<<<<<<<<<<<
@@ -2208,7 +2208,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_t_3 = (__pyx_t_2 != 0);
   if (__pyx_t_3) {
 
-    /* "gotoh_counts/gotoh_counts.pyx":47
+    /* "gotoh/gotoh.pyx":47
  *     cdef size_t max_i = len(seqi)
  *     if max_i == max_j == 0:
  *         return 0, 0, 0, 0             # <<<<<<<<<<<<<<
@@ -2222,7 +2222,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
     __pyx_r = __pyx_t_4;
     goto __pyx_L0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":46
+    /* "gotoh/gotoh.pyx":46
  *     cdef size_t max_j = len(seqj)
  *     cdef size_t max_i = len(seqi)
  *     if max_i == max_j == 0:             # <<<<<<<<<<<<<<
@@ -2231,7 +2231,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":50
+  /* "gotoh/gotoh.pyx":50
  * 
  * 
  *     if max_j > max_i:             # <<<<<<<<<<<<<<
@@ -2241,7 +2241,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_t_3 = ((__pyx_v_max_j > __pyx_v_max_i) != 0);
   if (__pyx_t_3) {
 
-    /* "gotoh_counts/gotoh_counts.pyx":51
+    /* "gotoh/gotoh.pyx":51
  * 
  *     if max_j > max_i:
  *         flip = 1             # <<<<<<<<<<<<<<
@@ -2250,7 +2250,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
     __pyx_v_flip = 1;
 
-    /* "gotoh_counts/gotoh_counts.pyx":52
+    /* "gotoh/gotoh.pyx":52
  *     if max_j > max_i:
  *         flip = 1
  *         seqi, seqj = seqj, seqi             # <<<<<<<<<<<<<<
@@ -2264,7 +2264,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
     __pyx_v_seqj = ((PyObject*)__pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":53
+    /* "gotoh/gotoh.pyx":53
  *         flip = 1
  *         seqi, seqj = seqj, seqi
  *         max_i, max_j = max_j, max_i             # <<<<<<<<<<<<<<
@@ -2276,7 +2276,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
     __pyx_v_max_i = __pyx_t_7;
     __pyx_v_max_j = __pyx_t_8;
 
-    /* "gotoh_counts/gotoh_counts.pyx":50
+    /* "gotoh/gotoh.pyx":50
  * 
  * 
  *     if max_j > max_i:             # <<<<<<<<<<<<<<
@@ -2285,7 +2285,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":56
+  /* "gotoh/gotoh.pyx":56
  * 
  *     # need to initialize j for the case when it's a zero-length string.
  *     cdef size_t i = 0, j = 0, p             # <<<<<<<<<<<<<<
@@ -2295,7 +2295,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_v_i = 0;
   __pyx_v_j = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":60
+  /* "gotoh/gotoh.pyx":60
  * 
  *     cdef char ci, cj
  *     cdef int zero=0, one=1             # <<<<<<<<<<<<<<
@@ -2305,7 +2305,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_v_zero = 0;
   __pyx_v_one = 1;
 
-  /* "gotoh_counts/gotoh_counts.pyx":61
+  /* "gotoh/gotoh.pyx":61
  *     cdef char ci, cj
  *     cdef int zero=0, one=1
  *     cdef int match_count=0, mismatch_count=0, gap_count=0, extension_count=0             # <<<<<<<<<<<<<<
@@ -2317,7 +2317,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_v_gap_count = 0;
   __pyx_v_extension_count = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":63
+  /* "gotoh/gotoh.pyx":63
  *     cdef int match_count=0, mismatch_count=0, gap_count=0, extension_count=0
  * 
  *     assert gap_extend <= 0, "gap_extend penalty must be <= 0"             # <<<<<<<<<<<<<<
@@ -2333,7 +2333,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   }
   #endif
 
-  /* "gotoh_counts/gotoh_counts.pyx":64
+  /* "gotoh/gotoh.pyx":64
  * 
  *     assert gap_extend <= 0, "gap_extend penalty must be <= 0"
  *     assert gap_open <= 0, "gap_open must be <= 0"             # <<<<<<<<<<<<<<
@@ -2349,7 +2349,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   }
   #endif
 
-  /* "gotoh_counts/gotoh_counts.pyx":66
+  /* "gotoh/gotoh.pyx":66
  *     assert gap_open <= 0, "gap_open must be <= 0"
  * 
  *     cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_i = np.ones((max_i + 1,), dtype=np.int8)             # <<<<<<<<<<<<<<
@@ -2391,7 +2391,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_t_14 = ((PyArrayObject *)__pyx_t_13);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_agap_i.rcbuffer->pybuffer, (PyObject*)__pyx_t_14, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_agap_i.rcbuffer->pybuffer, (PyObject*)__pyx_t_14, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_BOOL, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_agap_i = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 66, __pyx_L1_error)
     } else {__pyx_pybuffernd_agap_i.diminfo[0].strides = __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_agap_i.diminfo[0].shape = __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.shape[0];
@@ -2401,7 +2401,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_v_agap_i = ((PyArrayObject *)__pyx_t_13);
   __pyx_t_13 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":67
+  /* "gotoh/gotoh.pyx":67
  * 
  *     cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_i = np.ones((max_i + 1,), dtype=np.int8)
  *     cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_j = np.ones((max_j + 1,), dtype=np.int8)             # <<<<<<<<<<<<<<
@@ -2443,7 +2443,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_t_15 = ((PyArrayObject *)__pyx_t_12);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_agap_j.rcbuffer->pybuffer, (PyObject*)__pyx_t_15, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_agap_j.rcbuffer->pybuffer, (PyObject*)__pyx_t_15, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_BOOL, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_agap_j = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 67, __pyx_L1_error)
     } else {__pyx_pybuffernd_agap_j.diminfo[0].strides = __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_agap_j.diminfo[0].shape = __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.shape[0];
@@ -2453,7 +2453,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_v_agap_j = ((PyArrayObject *)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":69
+  /* "gotoh/gotoh.pyx":69
  *     cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_j = np.ones((max_j + 1,), dtype=np.int8)
  * 
  *     cdef np.ndarray[float, ndim=2] score = np.empty((max_i + 1, max_j + 1), dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -2510,7 +2510,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_v_score = ((PyArrayObject *)__pyx_t_10);
   __pyx_t_10 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":70
+  /* "gotoh/gotoh.pyx":70
  * 
  *     cdef np.ndarray[float, ndim=2] score = np.empty((max_i + 1, max_j + 1), dtype=np.float32)
  *     cdef np.ndarray[DTYPE_UINT, ndim=2] pointer = np.empty((max_i + 1, max_j + 1), dtype=np.uint)             # <<<<<<<<<<<<<<
@@ -2557,7 +2557,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_t_17 = ((PyArrayObject *)__pyx_t_12);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pointer.rcbuffer->pybuffer, (PyObject*)__pyx_t_17, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 2, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pointer.rcbuffer->pybuffer, (PyObject*)__pyx_t_17, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_UINT, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_pointer = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 70, __pyx_L1_error)
     } else {__pyx_pybuffernd_pointer.diminfo[0].strides = __pyx_pybuffernd_pointer.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_pointer.diminfo[0].shape = __pyx_pybuffernd_pointer.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_pointer.diminfo[1].strides = __pyx_pybuffernd_pointer.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_pointer.diminfo[1].shape = __pyx_pybuffernd_pointer.rcbuffer->pybuffer.shape[1];
@@ -2567,7 +2567,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_v_pointer = ((PyArrayObject *)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":72
+  /* "gotoh/gotoh.pyx":72
  *     cdef np.ndarray[DTYPE_UINT, ndim=2] pointer = np.empty((max_i + 1, max_j + 1), dtype=np.uint)
  * 
  *     pointer[0, 0] = NONE             # <<<<<<<<<<<<<<
@@ -2576,9 +2576,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
   __pyx_t_18 = 0;
   __pyx_t_19 = 0;
-  *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_NONE;
+  *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_19, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_NONE;
 
-  /* "gotoh_counts/gotoh_counts.pyx":73
+  /* "gotoh/gotoh.pyx":73
  * 
  *     pointer[0, 0] = NONE
  *     score[0, 0] = 0             # <<<<<<<<<<<<<<
@@ -2589,31 +2589,31 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_t_18 = 0;
   *__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_19, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_18, __pyx_pybuffernd_score.diminfo[1].strides) = 0.0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":75
+  /* "gotoh/gotoh.pyx":75
  *     score[0, 0] = 0
  * 
  *     pointer[0, 1:] = LEFT             # <<<<<<<<<<<<<<
  *     pointer[1:, 0] = UP
  * 
  */
-  __pyx_t_12 = __Pyx_PyInt_FromSize_t(__pyx_v_12gotoh_counts_12gotoh_counts_LEFT); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 75, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyInt_FromSize_t(__pyx_v_5gotoh_5gotoh_LEFT); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_pointer), __pyx_tuple__2, __pyx_t_12) < 0)) __PYX_ERR(0, 75, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":76
+  /* "gotoh/gotoh.pyx":76
  * 
  *     pointer[0, 1:] = LEFT
  *     pointer[1:, 0] = UP             # <<<<<<<<<<<<<<
  * 
  *     score[0, 1:] = gap_open + gap_extend * np.arange(0, max_j, dtype=np.float32)
  */
-  __pyx_t_12 = __Pyx_PyInt_FromSize_t(__pyx_v_12gotoh_counts_12gotoh_counts_UP); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyInt_FromSize_t(__pyx_v_5gotoh_5gotoh_UP); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_pointer), __pyx_tuple__3, __pyx_t_12) < 0)) __PYX_ERR(0, 76, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":78
+  /* "gotoh/gotoh.pyx":78
  *     pointer[1:, 0] = UP
  * 
  *     score[0, 1:] = gap_open + gap_extend * np.arange(0, max_j, dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -2664,7 +2664,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_score), __pyx_tuple__2, __pyx_t_21) < 0)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":79
+  /* "gotoh/gotoh.pyx":79
  * 
  *     score[0, 1:] = gap_open + gap_extend * np.arange(0, max_j, dtype=np.float32)
  *     score[1:, 0] = gap_open + gap_extend * np.arange(0, max_i, dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -2715,7 +2715,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_score), __pyx_tuple__3, __pyx_t_20) < 0)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_20); __pyx_t_20 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":81
+  /* "gotoh/gotoh.pyx":81
  *     score[1:, 0] = gap_open + gap_extend * np.arange(0, max_i, dtype=np.float32)
  * 
  *     agap_i[0] = zero             # <<<<<<<<<<<<<<
@@ -2723,9 +2723,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  *     for i in range(1, max_i + 1):
  */
   __pyx_t_18 = 0;
-  *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
+  *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
 
-  /* "gotoh_counts/gotoh_counts.pyx":83
+  /* "gotoh/gotoh.pyx":83
  *     agap_i[0] = zero
  * 
  *     for i in range(1, max_i + 1):             # <<<<<<<<<<<<<<
@@ -2737,7 +2737,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   for (__pyx_t_22 = 1; __pyx_t_22 < __pyx_t_7; __pyx_t_22+=1) {
     __pyx_v_i = __pyx_t_22;
 
-    /* "gotoh_counts/gotoh_counts.pyx":84
+    /* "gotoh/gotoh.pyx":84
  * 
  *     for i in range(1, max_i + 1):
  *         ci = seqi[<size_t>(i - 1)]             # <<<<<<<<<<<<<<
@@ -2748,7 +2748,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
     __pyx_t_24 = __Pyx_GetItemInt_Unicode(__pyx_v_seqi, __pyx_t_23, size_t, 0, __Pyx_PyInt_FromSize_t, 0, 0, 0); if (unlikely(__pyx_t_24 == (Py_UCS4)-1)) __PYX_ERR(0, 84, __pyx_L1_error)
     __pyx_v_ci = __pyx_t_24;
 
-    /* "gotoh_counts/gotoh_counts.pyx":86
+    /* "gotoh/gotoh.pyx":86
  *         ci = seqi[<size_t>(i - 1)]
  * 
  *         agap_j[0] = zero             # <<<<<<<<<<<<<<
@@ -2756,9 +2756,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  *             agap_j[j] = one
  */
     __pyx_t_18 = 0;
-    *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_agap_j.diminfo[0].strides) = __pyx_v_zero;
+    *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_18, __pyx_pybuffernd_agap_j.diminfo[0].strides) = __pyx_v_zero;
 
-    /* "gotoh_counts/gotoh_counts.pyx":87
+    /* "gotoh/gotoh.pyx":87
  * 
  *         agap_j[0] = zero
  *         for j in range(1, max_j + 1):             # <<<<<<<<<<<<<<
@@ -2770,7 +2770,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
     for (__pyx_t_26 = 1; __pyx_t_26 < __pyx_t_25; __pyx_t_26+=1) {
       __pyx_v_j = __pyx_t_26;
 
-      /* "gotoh_counts/gotoh_counts.pyx":88
+      /* "gotoh/gotoh.pyx":88
  *         agap_j[0] = zero
  *         for j in range(1, max_j + 1):
  *             agap_j[j] = one             # <<<<<<<<<<<<<<
@@ -2778,9 +2778,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  *             tscore = match if ci == cj else mismatch
  */
       __pyx_t_27 = __pyx_v_j;
-      *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_agap_j.diminfo[0].strides) = __pyx_v_one;
+      *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_agap_j.diminfo[0].strides) = __pyx_v_one;
 
-      /* "gotoh_counts/gotoh_counts.pyx":89
+      /* "gotoh/gotoh.pyx":89
  *         for j in range(1, max_j + 1):
  *             agap_j[j] = one
  *             cj = seqj[<size_t>(j - 1)]             # <<<<<<<<<<<<<<
@@ -2791,7 +2791,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_24 = __Pyx_GetItemInt_Unicode(__pyx_v_seqj, __pyx_t_27, size_t, 0, __Pyx_PyInt_FromSize_t, 0, 0, 0); if (unlikely(__pyx_t_24 == (Py_UCS4)-1)) __PYX_ERR(0, 89, __pyx_L1_error)
       __pyx_v_cj = __pyx_t_24;
 
-      /* "gotoh_counts/gotoh_counts.pyx":90
+      /* "gotoh/gotoh.pyx":90
  *             agap_j[j] = one
  *             cj = seqj[<size_t>(j - 1)]
  *             tscore = match if ci == cj else mismatch             # <<<<<<<<<<<<<<
@@ -2805,7 +2805,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       }
       __pyx_v_tscore = __pyx_t_28;
 
-      /* "gotoh_counts/gotoh_counts.pyx":92
+      /* "gotoh/gotoh.pyx":92
  *             tscore = match if ci == cj else mismatch
  * 
  *             diag_score = score[<size_t>(i - 1), <size_t>(j - 1)] + tscore             # <<<<<<<<<<<<<<
@@ -2816,7 +2816,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_29 = ((size_t)(__pyx_v_j - 1));
       __pyx_v_diag_score = ((*__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_score.diminfo[1].strides)) + __pyx_v_tscore);
 
-      /* "gotoh_counts/gotoh_counts.pyx":93
+      /* "gotoh/gotoh.pyx":93
  * 
  *             diag_score = score[<size_t>(i - 1), <size_t>(j - 1)] + tscore
  *             up_score   = score[<size_t>(i - 1), j] + (gap_open if agap_i[<size_t>(i - 1)] == zero else gap_extend)             # <<<<<<<<<<<<<<
@@ -2826,14 +2826,14 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_29 = ((size_t)(__pyx_v_i - 1));
       __pyx_t_27 = __pyx_v_j;
       __pyx_t_30 = ((size_t)(__pyx_v_i - 1));
-      if ((((*__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_agap_i.diminfo[0].strides)) == __pyx_v_zero) != 0)) {
+      if ((((*__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_agap_i.diminfo[0].strides)) == __pyx_v_zero) != 0)) {
         __pyx_t_28 = __pyx_v_gap_open;
       } else {
         __pyx_t_28 = __pyx_v_gap_extend;
       }
       __pyx_v_up_score = ((*__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_score.diminfo[1].strides)) + __pyx_t_28);
 
-      /* "gotoh_counts/gotoh_counts.pyx":94
+      /* "gotoh/gotoh.pyx":94
  *             diag_score = score[<size_t>(i - 1), <size_t>(j - 1)] + tscore
  *             up_score   = score[<size_t>(i - 1), j] + (gap_open if agap_i[<size_t>(i - 1)] == zero else gap_extend)
  *             left_score = score[i, <size_t>(j - 1)] + (gap_open if agap_j[<size_t>(j - 1)] == zero else gap_extend)             # <<<<<<<<<<<<<<
@@ -2843,14 +2843,14 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_27 = __pyx_v_i;
       __pyx_t_29 = ((size_t)(__pyx_v_j - 1));
       __pyx_t_30 = ((size_t)(__pyx_v_j - 1));
-      if ((((*__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_agap_j.diminfo[0].strides)) == __pyx_v_zero) != 0)) {
+      if ((((*__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_30, __pyx_pybuffernd_agap_j.diminfo[0].strides)) == __pyx_v_zero) != 0)) {
         __pyx_t_28 = __pyx_v_gap_open;
       } else {
         __pyx_t_28 = __pyx_v_gap_extend;
       }
       __pyx_v_left_score = ((*__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_score.diminfo[1].strides)) + __pyx_t_28);
 
-      /* "gotoh_counts/gotoh_counts.pyx":102
+      /* "gotoh/gotoh.pyx":102
  *             this forces gaps to the ends of the aligments.
  *             """
  *             if diag_score == left_score:             # <<<<<<<<<<<<<<
@@ -2860,7 +2860,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_3 = ((__pyx_v_diag_score == __pyx_v_left_score) != 0);
       if (__pyx_t_3) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":105
+        /* "gotoh/gotoh.pyx":105
  *                 # so here. if we're at the end we choose a gap.
  *                 # otherwise, we choose diag
  *                 if i == max_i or i == 1:             # <<<<<<<<<<<<<<
@@ -2878,7 +2878,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         __pyx_L11_bool_binop_done:;
         if (__pyx_t_3) {
 
-          /* "gotoh_counts/gotoh_counts.pyx":106
+          /* "gotoh/gotoh.pyx":106
  *                 # otherwise, we choose diag
  *                 if i == max_i or i == 1:
  *                     score[i, j] = left_score             # <<<<<<<<<<<<<<
@@ -2889,7 +2889,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           __pyx_t_27 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_left_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":107
+          /* "gotoh/gotoh.pyx":107
  *                 if i == max_i or i == 1:
  *                     score[i, j] = left_score
  *                     pointer[i, j] = LEFT             # <<<<<<<<<<<<<<
@@ -2898,9 +2898,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
           __pyx_t_27 = __pyx_v_i;
           __pyx_t_29 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_LEFT;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_LEFT;
 
-          /* "gotoh_counts/gotoh_counts.pyx":105
+          /* "gotoh/gotoh.pyx":105
  *                 # so here. if we're at the end we choose a gap.
  *                 # otherwise, we choose diag
  *                 if i == max_i or i == 1:             # <<<<<<<<<<<<<<
@@ -2910,7 +2910,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           goto __pyx_L10;
         }
 
-        /* "gotoh_counts/gotoh_counts.pyx":109
+        /* "gotoh/gotoh.pyx":109
  *                     pointer[i, j] = LEFT
  *                 else: # we want a diagonal
  *                     score[i, j] = diag_score             # <<<<<<<<<<<<<<
@@ -2922,7 +2922,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           __pyx_t_27 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_diag_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":110
+          /* "gotoh/gotoh.pyx":110
  *                 else: # we want a diagonal
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG             # <<<<<<<<<<<<<<
@@ -2931,9 +2931,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
           __pyx_t_27 = __pyx_v_i;
           __pyx_t_29 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_DIAG;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_DIAG;
 
-          /* "gotoh_counts/gotoh_counts.pyx":111
+          /* "gotoh/gotoh.pyx":111
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero             # <<<<<<<<<<<<<<
@@ -2941,11 +2941,11 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  *                 if j == max_j or j == 1:
  */
           __pyx_t_29 = __pyx_v_i;
-          *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
+          *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
         }
         __pyx_L10:;
 
-        /* "gotoh_counts/gotoh_counts.pyx":102
+        /* "gotoh/gotoh.pyx":102
  *             this forces gaps to the ends of the aligments.
  *             """
  *             if diag_score == left_score:             # <<<<<<<<<<<<<<
@@ -2955,7 +2955,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         goto __pyx_L9;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":112
+      /* "gotoh/gotoh.pyx":112
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero
  *             elif diag_score == up_score:             # <<<<<<<<<<<<<<
@@ -2965,7 +2965,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_3 = ((__pyx_v_diag_score == __pyx_v_up_score) != 0);
       if (__pyx_t_3) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":113
+        /* "gotoh/gotoh.pyx":113
  *                     agap_i[i] = zero
  *             elif diag_score == up_score:
  *                 if j == max_j or j == 1:             # <<<<<<<<<<<<<<
@@ -2983,7 +2983,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         __pyx_L14_bool_binop_done:;
         if (__pyx_t_3) {
 
-          /* "gotoh_counts/gotoh_counts.pyx":114
+          /* "gotoh/gotoh.pyx":114
  *             elif diag_score == up_score:
  *                 if j == max_j or j == 1:
  *                     score[i, j] = up_score             # <<<<<<<<<<<<<<
@@ -2994,7 +2994,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           __pyx_t_27 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_up_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":115
+          /* "gotoh/gotoh.pyx":115
  *                 if j == max_j or j == 1:
  *                     score[i, j] = up_score
  *                     pointer[i, j] = UP             # <<<<<<<<<<<<<<
@@ -3003,9 +3003,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
           __pyx_t_27 = __pyx_v_i;
           __pyx_t_29 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_UP;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_UP;
 
-          /* "gotoh_counts/gotoh_counts.pyx":113
+          /* "gotoh/gotoh.pyx":113
  *                     agap_i[i] = zero
  *             elif diag_score == up_score:
  *                 if j == max_j or j == 1:             # <<<<<<<<<<<<<<
@@ -3015,7 +3015,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           goto __pyx_L13;
         }
 
-        /* "gotoh_counts/gotoh_counts.pyx":117
+        /* "gotoh/gotoh.pyx":117
  *                     pointer[i, j] = UP
  *                 else: # we want a diagonal
  *                     score[i, j] = diag_score             # <<<<<<<<<<<<<<
@@ -3027,7 +3027,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           __pyx_t_27 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_diag_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":118
+          /* "gotoh/gotoh.pyx":118
  *                 else: # we want a diagonal
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG             # <<<<<<<<<<<<<<
@@ -3036,9 +3036,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
           __pyx_t_27 = __pyx_v_i;
           __pyx_t_29 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_DIAG;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_DIAG;
 
-          /* "gotoh_counts/gotoh_counts.pyx":119
+          /* "gotoh/gotoh.pyx":119
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero             # <<<<<<<<<<<<<<
@@ -3046,11 +3046,11 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  * 
  */
           __pyx_t_29 = __pyx_v_i;
-          *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
+          *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
         }
         __pyx_L13:;
 
-        /* "gotoh_counts/gotoh_counts.pyx":112
+        /* "gotoh/gotoh.pyx":112
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero
  *             elif diag_score == up_score:             # <<<<<<<<<<<<<<
@@ -3060,7 +3060,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         goto __pyx_L9;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":122
+      /* "gotoh/gotoh.pyx":122
  *             # end of ambiguous score checks.
  * 
  *             elif up_score > diag_score: #checked.             # <<<<<<<<<<<<<<
@@ -3070,7 +3070,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_3 = ((__pyx_v_up_score > __pyx_v_diag_score) != 0);
       if (__pyx_t_3) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":123
+        /* "gotoh/gotoh.pyx":123
  * 
  *             elif up_score > diag_score: #checked.
  *                 if up_score > left_score:             # <<<<<<<<<<<<<<
@@ -3080,7 +3080,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         __pyx_t_3 = ((__pyx_v_up_score > __pyx_v_left_score) != 0);
         if (__pyx_t_3) {
 
-          /* "gotoh_counts/gotoh_counts.pyx":124
+          /* "gotoh/gotoh.pyx":124
  *             elif up_score > diag_score: #checked.
  *                 if up_score > left_score:
  *                     score[i, j]  = up_score             # <<<<<<<<<<<<<<
@@ -3091,7 +3091,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           __pyx_t_27 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_up_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":125
+          /* "gotoh/gotoh.pyx":125
  *                 if up_score > left_score:
  *                     score[i, j]  = up_score
  *                     pointer[i, j] = UP             # <<<<<<<<<<<<<<
@@ -3100,9 +3100,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
           __pyx_t_27 = __pyx_v_i;
           __pyx_t_29 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_UP;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_UP;
 
-          /* "gotoh_counts/gotoh_counts.pyx":123
+          /* "gotoh/gotoh.pyx":123
  * 
  *             elif up_score > diag_score: #checked.
  *                 if up_score > left_score:             # <<<<<<<<<<<<<<
@@ -3112,7 +3112,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           goto __pyx_L16;
         }
 
-        /* "gotoh_counts/gotoh_counts.pyx":127
+        /* "gotoh/gotoh.pyx":127
  *                     pointer[i, j] = UP
  *                 else:
  *                     score[i, j]   = left_score             # <<<<<<<<<<<<<<
@@ -3124,7 +3124,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           __pyx_t_27 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_left_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":128
+          /* "gotoh/gotoh.pyx":128
  *                 else:
  *                     score[i, j]   = left_score
  *                     pointer[i, j] = LEFT             # <<<<<<<<<<<<<<
@@ -3133,11 +3133,11 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
           __pyx_t_27 = __pyx_v_i;
           __pyx_t_29 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_LEFT;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_LEFT;
         }
         __pyx_L16:;
 
-        /* "gotoh_counts/gotoh_counts.pyx":122
+        /* "gotoh/gotoh.pyx":122
  *             # end of ambiguous score checks.
  * 
  *             elif up_score > diag_score: #checked.             # <<<<<<<<<<<<<<
@@ -3147,7 +3147,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         goto __pyx_L9;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":129
+      /* "gotoh/gotoh.pyx":129
  *                     score[i, j]   = left_score
  *                     pointer[i, j] = LEFT
  *             elif diag_score > up_score:             # <<<<<<<<<<<<<<
@@ -3157,7 +3157,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_3 = ((__pyx_v_diag_score > __pyx_v_up_score) != 0);
       if (__pyx_t_3) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":130
+        /* "gotoh/gotoh.pyx":130
  *                     pointer[i, j] = LEFT
  *             elif diag_score > up_score:
  *                 if left_score > diag_score:             # <<<<<<<<<<<<<<
@@ -3167,7 +3167,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         __pyx_t_3 = ((__pyx_v_left_score > __pyx_v_diag_score) != 0);
         if (__pyx_t_3) {
 
-          /* "gotoh_counts/gotoh_counts.pyx":131
+          /* "gotoh/gotoh.pyx":131
  *             elif diag_score > up_score:
  *                 if left_score > diag_score:
  *                     score[i, j] = left_score             # <<<<<<<<<<<<<<
@@ -3178,7 +3178,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           __pyx_t_27 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_left_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":132
+          /* "gotoh/gotoh.pyx":132
  *                 if left_score > diag_score:
  *                     score[i, j] = left_score
  *                     pointer[i, j] = LEFT             # <<<<<<<<<<<<<<
@@ -3187,9 +3187,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
           __pyx_t_27 = __pyx_v_i;
           __pyx_t_29 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_LEFT;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_LEFT;
 
-          /* "gotoh_counts/gotoh_counts.pyx":130
+          /* "gotoh/gotoh.pyx":130
  *                     pointer[i, j] = LEFT
  *             elif diag_score > up_score:
  *                 if left_score > diag_score:             # <<<<<<<<<<<<<<
@@ -3199,7 +3199,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           goto __pyx_L17;
         }
 
-        /* "gotoh_counts/gotoh_counts.pyx":134
+        /* "gotoh/gotoh.pyx":134
  *                     pointer[i, j] = LEFT
  *                 else:
  *                     score[i, j] = diag_score             # <<<<<<<<<<<<<<
@@ -3211,7 +3211,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
           __pyx_t_27 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(float *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_27, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_diag_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":135
+          /* "gotoh/gotoh.pyx":135
  *                 else:
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG             # <<<<<<<<<<<<<<
@@ -3220,9 +3220,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
           __pyx_t_27 = __pyx_v_i;
           __pyx_t_29 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_DIAG;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_27, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_29, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_DIAG;
 
-          /* "gotoh_counts/gotoh_counts.pyx":136
+          /* "gotoh/gotoh.pyx":136
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero             # <<<<<<<<<<<<<<
@@ -3230,11 +3230,11 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  *     p = pointer[i, j]
  */
           __pyx_t_29 = __pyx_v_i;
-          *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
+          *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_29, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
         }
         __pyx_L17:;
 
-        /* "gotoh_counts/gotoh_counts.pyx":129
+        /* "gotoh/gotoh.pyx":129
  *                     score[i, j]   = left_score
  *                     pointer[i, j] = LEFT
  *             elif diag_score > up_score:             # <<<<<<<<<<<<<<
@@ -3246,7 +3246,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
     }
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":138
+  /* "gotoh/gotoh.pyx":138
  *                     agap_i[i] = zero
  * 
  *     p = pointer[i, j]             # <<<<<<<<<<<<<<
@@ -3255,18 +3255,18 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
   __pyx_t_8 = __pyx_v_i;
   __pyx_t_7 = __pyx_v_j;
-  __pyx_v_p = (*__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_8, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_7, __pyx_pybuffernd_pointer.diminfo[1].strides));
+  __pyx_v_p = (*__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_8, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_7, __pyx_pybuffernd_pointer.diminfo[1].strides));
 
-  /* "gotoh_counts/gotoh_counts.pyx":139
+  /* "gotoh/gotoh.pyx":139
  * 
  *     p = pointer[i, j]
  *     cdef size_t previous_pointer = NONE             # <<<<<<<<<<<<<<
  *     while p != NONE:
  *         if p == DIAG:
  */
-  __pyx_v_previous_pointer = __pyx_v_12gotoh_counts_12gotoh_counts_NONE;
+  __pyx_v_previous_pointer = __pyx_v_5gotoh_5gotoh_NONE;
 
-  /* "gotoh_counts/gotoh_counts.pyx":140
+  /* "gotoh/gotoh.pyx":140
  *     p = pointer[i, j]
  *     cdef size_t previous_pointer = NONE
  *     while p != NONE:             # <<<<<<<<<<<<<<
@@ -3274,20 +3274,20 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  *             i -= 1
  */
   while (1) {
-    __pyx_t_3 = ((__pyx_v_p != __pyx_v_12gotoh_counts_12gotoh_counts_NONE) != 0);
+    __pyx_t_3 = ((__pyx_v_p != __pyx_v_5gotoh_5gotoh_NONE) != 0);
     if (!__pyx_t_3) break;
 
-    /* "gotoh_counts/gotoh_counts.pyx":141
+    /* "gotoh/gotoh.pyx":141
  *     cdef size_t previous_pointer = NONE
  *     while p != NONE:
  *         if p == DIAG:             # <<<<<<<<<<<<<<
  *             i -= 1
  *             j -= 1
  */
-    __pyx_t_3 = ((__pyx_v_p == __pyx_v_12gotoh_counts_12gotoh_counts_DIAG) != 0);
+    __pyx_t_3 = ((__pyx_v_p == __pyx_v_5gotoh_5gotoh_DIAG) != 0);
     if (__pyx_t_3) {
 
-      /* "gotoh_counts/gotoh_counts.pyx":142
+      /* "gotoh/gotoh.pyx":142
  *     while p != NONE:
  *         if p == DIAG:
  *             i -= 1             # <<<<<<<<<<<<<<
@@ -3296,7 +3296,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
       __pyx_v_i = (__pyx_v_i - 1);
 
-      /* "gotoh_counts/gotoh_counts.pyx":143
+      /* "gotoh/gotoh.pyx":143
  *         if p == DIAG:
  *             i -= 1
  *             j -= 1             # <<<<<<<<<<<<<<
@@ -3305,7 +3305,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
       __pyx_v_j = (__pyx_v_j - 1);
 
-      /* "gotoh_counts/gotoh_counts.pyx":144
+      /* "gotoh/gotoh.pyx":144
  *             i -= 1
  *             j -= 1
  *             if seqj[j] == seqi[i]:             # <<<<<<<<<<<<<<
@@ -3317,7 +3317,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_3 = ((__pyx_t_24 == __pyx_t_31) != 0);
       if (__pyx_t_3) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":145
+        /* "gotoh/gotoh.pyx":145
  *             j -= 1
  *             if seqj[j] == seqi[i]:
  *                 match_count += 1             # <<<<<<<<<<<<<<
@@ -3326,7 +3326,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
         __pyx_v_match_count = (__pyx_v_match_count + 1);
 
-        /* "gotoh_counts/gotoh_counts.pyx":144
+        /* "gotoh/gotoh.pyx":144
  *             i -= 1
  *             j -= 1
  *             if seqj[j] == seqi[i]:             # <<<<<<<<<<<<<<
@@ -3336,7 +3336,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         goto __pyx_L21;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":147
+      /* "gotoh/gotoh.pyx":147
  *                 match_count += 1
  *             else:
  *                 mismatch_count += 1             # <<<<<<<<<<<<<<
@@ -3348,7 +3348,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       }
       __pyx_L21:;
 
-      /* "gotoh_counts/gotoh_counts.pyx":141
+      /* "gotoh/gotoh.pyx":141
  *     cdef size_t previous_pointer = NONE
  *     while p != NONE:
  *         if p == DIAG:             # <<<<<<<<<<<<<<
@@ -3358,17 +3358,17 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       goto __pyx_L20;
     }
 
-    /* "gotoh_counts/gotoh_counts.pyx":148
+    /* "gotoh/gotoh.pyx":148
  *             else:
  *                 mismatch_count += 1
  *         elif p == LEFT:             # <<<<<<<<<<<<<<
  *             j -= 1
  *             if p == previous_pointer:
  */
-    __pyx_t_3 = ((__pyx_v_p == __pyx_v_12gotoh_counts_12gotoh_counts_LEFT) != 0);
+    __pyx_t_3 = ((__pyx_v_p == __pyx_v_5gotoh_5gotoh_LEFT) != 0);
     if (__pyx_t_3) {
 
-      /* "gotoh_counts/gotoh_counts.pyx":149
+      /* "gotoh/gotoh.pyx":149
  *                 mismatch_count += 1
  *         elif p == LEFT:
  *             j -= 1             # <<<<<<<<<<<<<<
@@ -3377,7 +3377,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
       __pyx_v_j = (__pyx_v_j - 1);
 
-      /* "gotoh_counts/gotoh_counts.pyx":150
+      /* "gotoh/gotoh.pyx":150
  *         elif p == LEFT:
  *             j -= 1
  *             if p == previous_pointer:             # <<<<<<<<<<<<<<
@@ -3387,7 +3387,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_3 = ((__pyx_v_p == __pyx_v_previous_pointer) != 0);
       if (__pyx_t_3) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":151
+        /* "gotoh/gotoh.pyx":151
  *             j -= 1
  *             if p == previous_pointer:
  *                 extension_count += 1             # <<<<<<<<<<<<<<
@@ -3396,7 +3396,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
         __pyx_v_extension_count = (__pyx_v_extension_count + 1);
 
-        /* "gotoh_counts/gotoh_counts.pyx":150
+        /* "gotoh/gotoh.pyx":150
  *         elif p == LEFT:
  *             j -= 1
  *             if p == previous_pointer:             # <<<<<<<<<<<<<<
@@ -3406,7 +3406,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         goto __pyx_L22;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":153
+      /* "gotoh/gotoh.pyx":153
  *                 extension_count += 1
  *             else:
  *                 gap_count += 1             # <<<<<<<<<<<<<<
@@ -3418,7 +3418,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       }
       __pyx_L22:;
 
-      /* "gotoh_counts/gotoh_counts.pyx":148
+      /* "gotoh/gotoh.pyx":148
  *             else:
  *                 mismatch_count += 1
  *         elif p == LEFT:             # <<<<<<<<<<<<<<
@@ -3428,17 +3428,17 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       goto __pyx_L20;
     }
 
-    /* "gotoh_counts/gotoh_counts.pyx":155
+    /* "gotoh/gotoh.pyx":155
  *                 gap_count += 1
  * 
  *         elif p == UP:             # <<<<<<<<<<<<<<
  *             i -= 1
  *             if p == previous_pointer:
  */
-    __pyx_t_3 = ((__pyx_v_p == __pyx_v_12gotoh_counts_12gotoh_counts_UP) != 0);
+    __pyx_t_3 = ((__pyx_v_p == __pyx_v_5gotoh_5gotoh_UP) != 0);
     if (likely(__pyx_t_3)) {
 
-      /* "gotoh_counts/gotoh_counts.pyx":156
+      /* "gotoh/gotoh.pyx":156
  * 
  *         elif p == UP:
  *             i -= 1             # <<<<<<<<<<<<<<
@@ -3447,7 +3447,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
       __pyx_v_i = (__pyx_v_i - 1);
 
-      /* "gotoh_counts/gotoh_counts.pyx":157
+      /* "gotoh/gotoh.pyx":157
  *         elif p == UP:
  *             i -= 1
  *             if p == previous_pointer:             # <<<<<<<<<<<<<<
@@ -3457,7 +3457,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       __pyx_t_3 = ((__pyx_v_p == __pyx_v_previous_pointer) != 0);
       if (__pyx_t_3) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":158
+        /* "gotoh/gotoh.pyx":158
  *             i -= 1
  *             if p == previous_pointer:
  *                 extension_count += 1             # <<<<<<<<<<<<<<
@@ -3466,7 +3466,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
         __pyx_v_extension_count = (__pyx_v_extension_count + 1);
 
-        /* "gotoh_counts/gotoh_counts.pyx":157
+        /* "gotoh/gotoh.pyx":157
  *         elif p == UP:
  *             i -= 1
  *             if p == previous_pointer:             # <<<<<<<<<<<<<<
@@ -3476,7 +3476,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
         goto __pyx_L23;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":160
+      /* "gotoh/gotoh.pyx":160
  *                 extension_count += 1
  *             else:
  *                 gap_count += 1             # <<<<<<<<<<<<<<
@@ -3488,7 +3488,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       }
       __pyx_L23:;
 
-      /* "gotoh_counts/gotoh_counts.pyx":155
+      /* "gotoh/gotoh.pyx":155
  *                 gap_count += 1
  * 
  *         elif p == UP:             # <<<<<<<<<<<<<<
@@ -3498,7 +3498,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
       goto __pyx_L20;
     }
 
-    /* "gotoh_counts/gotoh_counts.pyx":162
+    /* "gotoh/gotoh.pyx":162
  *                 gap_count += 1
  *         else:
  *             raise Exception('Bad Pointer!:pointer: %i', p)             # <<<<<<<<<<<<<<
@@ -3525,7 +3525,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
     }
     __pyx_L20:;
 
-    /* "gotoh_counts/gotoh_counts.pyx":163
+    /* "gotoh/gotoh.pyx":163
  *         else:
  *             raise Exception('Bad Pointer!:pointer: %i', p)
  *         previous_pointer = p             # <<<<<<<<<<<<<<
@@ -3534,7 +3534,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
     __pyx_v_previous_pointer = __pyx_v_p;
 
-    /* "gotoh_counts/gotoh_counts.pyx":164
+    /* "gotoh/gotoh.pyx":164
  *             raise Exception('Bad Pointer!:pointer: %i', p)
  *         previous_pointer = p
  *         p = pointer[i, j]             # <<<<<<<<<<<<<<
@@ -3543,10 +3543,10 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
  */
     __pyx_t_7 = __pyx_v_i;
     __pyx_t_8 = __pyx_v_j;
-    __pyx_v_p = (*__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_7, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_8, __pyx_pybuffernd_pointer.diminfo[1].strides));
+    __pyx_v_p = (*__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_7, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_8, __pyx_pybuffernd_pointer.diminfo[1].strides));
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":167
+  /* "gotoh/gotoh.pyx":167
  * 
  * 
  *     return match_count, mismatch_count, gap_count, extension_count             # <<<<<<<<<<<<<<
@@ -3560,7 +3560,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
   __pyx_r = __pyx_t_4;
   goto __pyx_L0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":31
+  /* "gotoh/gotoh.pyx":31
  * 
  * 
  * cpdef (int, int, int, int) counts(str seqi, str seqj,             # <<<<<<<<<<<<<<
@@ -3586,7 +3586,7 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_pointer.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_score.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_WriteUnraisable("gotoh_counts.gotoh_counts.counts", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("gotoh.gotoh.counts", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __Pyx_pretend_to_initialize(&__pyx_r);
   goto __pyx_L2;
   __pyx_L0:;
@@ -3606,9 +3606,9 @@ static __pyx_ctuple_int__and_int__and_int__and_int __pyx_f_12gotoh_counts_12goto
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_1counts(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12gotoh_counts_12gotoh_counts_counts[] = "\n    Perform a global sequence alignment (Needleman-Wunsch) with affine gap penalties (Gotoh) on seqi and seqj. It returns a tuple with the number of characters that match, mismatch, open gaps and extend gaps.\n    The scores/penalties are given as arguments and the defaults correspond to basic Levenshtein distance.\n\n    Based almost entirely on Brent Pedersen\342\200\231s nwalign: https://bitbucket.org/brentp/biostuff/\n    ";
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_1counts(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5gotoh_5gotoh_1counts(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_5gotoh_5gotoh_counts[] = "\n    Perform a global sequence alignment (Needleman-Wunsch) with affine gap penalties (Gotoh) on seqi and seqj. It returns a tuple with the number of characters that match, mismatch, open gaps and extend gaps.\n    The scores/penalties are given as arguments and the defaults correspond to basic Levenshtein distance.\n\n    Based almost entirely on Brent Pedersen\342\200\231s nwalign: https://bitbucket.org/brentp/biostuff/\n    ";
+static PyObject *__pyx_pw_5gotoh_5gotoh_1counts(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_seqi = 0;
   PyObject *__pyx_v_seqj = 0;
   float __pyx_v_match;
@@ -3725,13 +3725,13 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_1counts(PyObject *__pyx_
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("counts", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 31, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.counts", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.counts", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqi), (&PyUnicode_Type), 1, "seqi", 1))) __PYX_ERR(0, 31, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqj), (&PyUnicode_Type), 1, "seqj", 1))) __PYX_ERR(0, 31, __pyx_L1_error)
-  __pyx_r = __pyx_pf_12gotoh_counts_12gotoh_counts_counts(__pyx_self, __pyx_v_seqi, __pyx_v_seqj, __pyx_v_match, __pyx_v_mismatch, __pyx_v_gap_open, __pyx_v_gap_extend);
+  __pyx_r = __pyx_pf_5gotoh_5gotoh_counts(__pyx_self, __pyx_v_seqi, __pyx_v_seqj, __pyx_v_match, __pyx_v_mismatch, __pyx_v_gap_open, __pyx_v_gap_extend);
 
   /* function exit code */
   goto __pyx_L0;
@@ -3742,11 +3742,11 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_1counts(PyObject *__pyx_
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_counts(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend) {
+static PyObject *__pyx_pf_5gotoh_5gotoh_counts(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   __pyx_ctuple_int__and_int__and_int__and_int __pyx_t_1;
-  struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_counts __pyx_t_2;
+  struct __pyx_opt_args_5gotoh_5gotoh_counts __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -3758,7 +3758,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_counts(CYTHON_UNUSED PyO
   __pyx_t_2.mismatch = __pyx_v_mismatch;
   __pyx_t_2.gap_open = __pyx_v_gap_open;
   __pyx_t_2.gap_extend = __pyx_v_gap_extend;
-  __pyx_t_1 = __pyx_f_12gotoh_counts_12gotoh_counts_counts(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
+  __pyx_t_1 = __pyx_f_5gotoh_5gotoh_counts(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
   __pyx_t_3 = __pyx_convert__to_py___pyx_ctuple_int__and_int__and_int__and_int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 31, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
@@ -3768,7 +3768,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_counts(CYTHON_UNUSED PyO
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.counts", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.counts", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -3776,7 +3776,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_counts(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "gotoh_counts/gotoh_counts.pyx":170
+/* "gotoh/gotoh.pyx":170
  * 
  * 
  * cpdef (float) score(str seqi, str seqj,             # <<<<<<<<<<<<<<
@@ -3784,8 +3784,8 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_counts(CYTHON_UNUSED PyO
  *                               float mismatch = -1,
  */
 
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_3score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static float __pyx_f_12gotoh_counts_12gotoh_counts_score(PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_score *__pyx_optional_args) {
+static PyObject *__pyx_pw_5gotoh_5gotoh_3score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static float __pyx_f_5gotoh_5gotoh_score(PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_5gotoh_5gotoh_score *__pyx_optional_args) {
   float __pyx_v_match = ((float)0.0);
   float __pyx_v_mismatch = ((float)-1.0);
   float __pyx_v_gap_open = ((float)-1.0);
@@ -3794,7 +3794,7 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_score(PyObject *__pyx_v_seqi,
   float __pyx_r;
   __Pyx_RefNannyDeclarations
   __pyx_ctuple_int__and_int__and_int__and_int __pyx_t_1;
-  struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_counts __pyx_t_2;
+  struct __pyx_opt_args_5gotoh_5gotoh_counts __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
@@ -3819,7 +3819,7 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_score(PyObject *__pyx_v_seqi,
     }
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":178
+  /* "gotoh/gotoh.pyx":178
  *     Returns the score of a sequence alignment.
  *     """
  *     my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)             # <<<<<<<<<<<<<<
@@ -3831,13 +3831,13 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_score(PyObject *__pyx_v_seqi,
   __pyx_t_2.mismatch = __pyx_v_mismatch;
   __pyx_t_2.gap_open = __pyx_v_gap_open;
   __pyx_t_2.gap_extend = __pyx_v_gap_extend;
-  __pyx_t_1 = __pyx_f_12gotoh_counts_12gotoh_counts_counts(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
+  __pyx_t_1 = __pyx_f_5gotoh_5gotoh_counts(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
   __pyx_t_3 = __pyx_convert__to_py___pyx_ctuple_int__and_int__and_int__and_int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_my_counts = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":179
+  /* "gotoh/gotoh.pyx":179
  *     """
  *     my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)
  *     return my_counts[0]*match + my_counts[1]*mismatch + my_counts[2]*gap_open + my_counts[3]*gap_extend             # <<<<<<<<<<<<<<
@@ -3893,7 +3893,7 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_score(PyObject *__pyx_v_seqi,
   __pyx_r = __pyx_t_7;
   goto __pyx_L0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":170
+  /* "gotoh/gotoh.pyx":170
  * 
  * 
  * cpdef (float) score(str seqi, str seqj,             # <<<<<<<<<<<<<<
@@ -3907,7 +3907,7 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_score(PyObject *__pyx_v_seqi,
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_WriteUnraisable("gotoh_counts.gotoh_counts.score", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("gotoh.gotoh.score", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_my_counts);
@@ -3916,9 +3916,9 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_score(PyObject *__pyx_v_seqi,
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_3score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12gotoh_counts_12gotoh_counts_2score[] = "\n    Returns the score of a sequence alignment.\n    ";
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_3score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5gotoh_5gotoh_3score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_5gotoh_5gotoh_2score[] = "\n    Returns the score of a sequence alignment.\n    ";
+static PyObject *__pyx_pw_5gotoh_5gotoh_3score(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_seqi = 0;
   PyObject *__pyx_v_seqj = 0;
   float __pyx_v_match;
@@ -4035,13 +4035,13 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_3score(PyObject *__pyx_s
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("score", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 170, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqi), (&PyUnicode_Type), 1, "seqi", 1))) __PYX_ERR(0, 170, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqj), (&PyUnicode_Type), 1, "seqj", 1))) __PYX_ERR(0, 170, __pyx_L1_error)
-  __pyx_r = __pyx_pf_12gotoh_counts_12gotoh_counts_2score(__pyx_self, __pyx_v_seqi, __pyx_v_seqj, __pyx_v_match, __pyx_v_mismatch, __pyx_v_gap_open, __pyx_v_gap_extend);
+  __pyx_r = __pyx_pf_5gotoh_5gotoh_2score(__pyx_self, __pyx_v_seqi, __pyx_v_seqj, __pyx_v_match, __pyx_v_mismatch, __pyx_v_gap_open, __pyx_v_gap_extend);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4052,11 +4052,11 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_3score(PyObject *__pyx_s
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_2score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend) {
+static PyObject *__pyx_pf_5gotoh_5gotoh_2score(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   float __pyx_t_1;
-  struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_score __pyx_t_2;
+  struct __pyx_opt_args_5gotoh_5gotoh_score __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -4068,7 +4068,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_2score(CYTHON_UNUSED PyO
   __pyx_t_2.mismatch = __pyx_v_mismatch;
   __pyx_t_2.gap_open = __pyx_v_gap_open;
   __pyx_t_2.gap_extend = __pyx_v_gap_extend;
-  __pyx_t_1 = __pyx_f_12gotoh_counts_12gotoh_counts_score(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
+  __pyx_t_1 = __pyx_f_5gotoh_5gotoh_score(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
   __pyx_t_3 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
@@ -4078,7 +4078,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_2score(CYTHON_UNUSED PyO
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.score", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.score", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4086,7 +4086,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_2score(CYTHON_UNUSED PyO
   return __pyx_r;
 }
 
-/* "gotoh_counts/gotoh_counts.pyx":182
+/* "gotoh/gotoh.pyx":182
  * 
  * 
  * cpdef (int) nonmatches(str seqi, str seqj,             # <<<<<<<<<<<<<<
@@ -4094,8 +4094,8 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_2score(CYTHON_UNUSED PyO
  *                               float mismatch = -1,
  */
 
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_5nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static int __pyx_f_12gotoh_counts_12gotoh_counts_nonmatches(PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_nonmatches *__pyx_optional_args) {
+static PyObject *__pyx_pw_5gotoh_5gotoh_5nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static int __pyx_f_5gotoh_5gotoh_nonmatches(PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_5gotoh_5gotoh_nonmatches *__pyx_optional_args) {
   float __pyx_v_match = ((float)0.0);
   float __pyx_v_mismatch = ((float)-1.0);
   float __pyx_v_gap_open = ((float)-1.0);
@@ -4104,7 +4104,7 @@ static int __pyx_f_12gotoh_counts_12gotoh_counts_nonmatches(PyObject *__pyx_v_se
   int __pyx_r;
   __Pyx_RefNannyDeclarations
   __pyx_ctuple_int__and_int__and_int__and_int __pyx_t_1;
-  struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_counts __pyx_t_2;
+  struct __pyx_opt_args_5gotoh_5gotoh_counts __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
@@ -4128,7 +4128,7 @@ static int __pyx_f_12gotoh_counts_12gotoh_counts_nonmatches(PyObject *__pyx_v_se
     }
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":190
+  /* "gotoh/gotoh.pyx":190
  *     Returns the number of different characters that do not match.
  *     """
  *     my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)             # <<<<<<<<<<<<<<
@@ -4140,13 +4140,13 @@ static int __pyx_f_12gotoh_counts_12gotoh_counts_nonmatches(PyObject *__pyx_v_se
   __pyx_t_2.mismatch = __pyx_v_mismatch;
   __pyx_t_2.gap_open = __pyx_v_gap_open;
   __pyx_t_2.gap_extend = __pyx_v_gap_extend;
-  __pyx_t_1 = __pyx_f_12gotoh_counts_12gotoh_counts_counts(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
+  __pyx_t_1 = __pyx_f_5gotoh_5gotoh_counts(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
   __pyx_t_3 = __pyx_convert__to_py___pyx_ctuple_int__and_int__and_int__and_int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 190, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_my_counts = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":191
+  /* "gotoh/gotoh.pyx":191
  *     """
  *     my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)
  *     return my_counts[1] + my_counts[2] + my_counts[3]             # <<<<<<<<<<<<<<
@@ -4172,7 +4172,7 @@ static int __pyx_f_12gotoh_counts_12gotoh_counts_nonmatches(PyObject *__pyx_v_se
   __pyx_r = __pyx_t_6;
   goto __pyx_L0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":182
+  /* "gotoh/gotoh.pyx":182
  * 
  * 
  * cpdef (int) nonmatches(str seqi, str seqj,             # <<<<<<<<<<<<<<
@@ -4185,7 +4185,7 @@ static int __pyx_f_12gotoh_counts_12gotoh_counts_nonmatches(PyObject *__pyx_v_se
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_WriteUnraisable("gotoh_counts.gotoh_counts.nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("gotoh.gotoh.nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_my_counts);
@@ -4194,9 +4194,9 @@ static int __pyx_f_12gotoh_counts_12gotoh_counts_nonmatches(PyObject *__pyx_v_se
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_5nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12gotoh_counts_12gotoh_counts_4nonmatches[] = "\n    Returns the number of different characters that do not match.\n    ";
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_5nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5gotoh_5gotoh_5nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_5gotoh_5gotoh_4nonmatches[] = "\n    Returns the number of different characters that do not match.\n    ";
+static PyObject *__pyx_pw_5gotoh_5gotoh_5nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_seqi = 0;
   PyObject *__pyx_v_seqj = 0;
   float __pyx_v_match;
@@ -4313,13 +4313,13 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_5nonmatches(PyObject *__
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("nonmatches", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 182, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqi), (&PyUnicode_Type), 1, "seqi", 1))) __PYX_ERR(0, 182, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqj), (&PyUnicode_Type), 1, "seqj", 1))) __PYX_ERR(0, 182, __pyx_L1_error)
-  __pyx_r = __pyx_pf_12gotoh_counts_12gotoh_counts_4nonmatches(__pyx_self, __pyx_v_seqi, __pyx_v_seqj, __pyx_v_match, __pyx_v_mismatch, __pyx_v_gap_open, __pyx_v_gap_extend);
+  __pyx_r = __pyx_pf_5gotoh_5gotoh_4nonmatches(__pyx_self, __pyx_v_seqi, __pyx_v_seqj, __pyx_v_match, __pyx_v_mismatch, __pyx_v_gap_open, __pyx_v_gap_extend);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4330,11 +4330,11 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_5nonmatches(PyObject *__
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_4nonmatches(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend) {
+static PyObject *__pyx_pf_5gotoh_5gotoh_4nonmatches(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   int __pyx_t_1;
-  struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_nonmatches __pyx_t_2;
+  struct __pyx_opt_args_5gotoh_5gotoh_nonmatches __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -4346,7 +4346,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_4nonmatches(CYTHON_UNUSE
   __pyx_t_2.mismatch = __pyx_v_mismatch;
   __pyx_t_2.gap_open = __pyx_v_gap_open;
   __pyx_t_2.gap_extend = __pyx_v_gap_extend;
-  __pyx_t_1 = __pyx_f_12gotoh_counts_12gotoh_counts_nonmatches(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
+  __pyx_t_1 = __pyx_f_5gotoh_5gotoh_nonmatches(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
   __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
@@ -4356,7 +4356,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_4nonmatches(CYTHON_UNUSE
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4364,7 +4364,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_4nonmatches(CYTHON_UNUSE
   return __pyx_r;
 }
 
-/* "gotoh_counts/gotoh_counts.pyx":194
+/* "gotoh/gotoh.pyx":194
  * 
  * 
  * cpdef (float) weighted_nonmatches(str seqi, str seqj,             # <<<<<<<<<<<<<<
@@ -4372,8 +4372,8 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_4nonmatches(CYTHON_UNUSE
  *                               float mismatch = -1,
  */
 
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_7weighted_nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static float __pyx_f_12gotoh_counts_12gotoh_counts_weighted_nonmatches(PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_weighted_nonmatches *__pyx_optional_args) {
+static PyObject *__pyx_pw_5gotoh_5gotoh_7weighted_nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static float __pyx_f_5gotoh_5gotoh_weighted_nonmatches(PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_5gotoh_5gotoh_weighted_nonmatches *__pyx_optional_args) {
   float __pyx_v_match = ((float)0.0);
   float __pyx_v_mismatch = ((float)-1.0);
   float __pyx_v_gap_open = ((float)-1.0);
@@ -4382,7 +4382,7 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_weighted_nonmatches(PyObject 
   float __pyx_r;
   __Pyx_RefNannyDeclarations
   __pyx_ctuple_int__and_int__and_int__and_int __pyx_t_1;
-  struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_counts __pyx_t_2;
+  struct __pyx_opt_args_5gotoh_5gotoh_counts __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
   PyObject *__pyx_t_5 = NULL;
@@ -4407,7 +4407,7 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_weighted_nonmatches(PyObject 
     }
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":202
+  /* "gotoh/gotoh.pyx":202
  *     Returns the number of different characters that do not match, multiplied by the negative weight for each category.
  *     """
  *     my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)             # <<<<<<<<<<<<<<
@@ -4419,13 +4419,13 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_weighted_nonmatches(PyObject 
   __pyx_t_2.mismatch = __pyx_v_mismatch;
   __pyx_t_2.gap_open = __pyx_v_gap_open;
   __pyx_t_2.gap_extend = __pyx_v_gap_extend;
-  __pyx_t_1 = __pyx_f_12gotoh_counts_12gotoh_counts_counts(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
+  __pyx_t_1 = __pyx_f_5gotoh_5gotoh_counts(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
   __pyx_t_3 = __pyx_convert__to_py___pyx_ctuple_int__and_int__and_int__and_int(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 202, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_v_my_counts = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":203
+  /* "gotoh/gotoh.pyx":203
  *     """
  *     my_counts = counts(seqi,seqj,match,mismatch,gap_open,gap_extend)
  *     return -(my_counts[1]*mismatch + my_counts[2]*gap_open + my_counts[3]*gap_extend)             # <<<<<<<<<<<<<<
@@ -4472,7 +4472,7 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_weighted_nonmatches(PyObject 
   __pyx_r = __pyx_t_7;
   goto __pyx_L0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":194
+  /* "gotoh/gotoh.pyx":194
  * 
  * 
  * cpdef (float) weighted_nonmatches(str seqi, str seqj,             # <<<<<<<<<<<<<<
@@ -4486,7 +4486,7 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_weighted_nonmatches(PyObject 
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_WriteUnraisable("gotoh_counts.gotoh_counts.weighted_nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_WriteUnraisable("gotoh.gotoh.weighted_nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_my_counts);
@@ -4495,9 +4495,9 @@ static float __pyx_f_12gotoh_counts_12gotoh_counts_weighted_nonmatches(PyObject 
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_7weighted_nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12gotoh_counts_12gotoh_counts_6weighted_nonmatches[] = "\n    Returns the number of different characters that do not match, multiplied by the negative weight for each category.\n    ";
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_7weighted_nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5gotoh_5gotoh_7weighted_nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_5gotoh_5gotoh_6weighted_nonmatches[] = "\n    Returns the number of different characters that do not match, multiplied by the negative weight for each category.\n    ";
+static PyObject *__pyx_pw_5gotoh_5gotoh_7weighted_nonmatches(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_seqi = 0;
   PyObject *__pyx_v_seqj = 0;
   float __pyx_v_match;
@@ -4614,13 +4614,13 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_7weighted_nonmatches(PyO
   __pyx_L5_argtuple_error:;
   __Pyx_RaiseArgtupleInvalid("weighted_nonmatches", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 194, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.weighted_nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.weighted_nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqi), (&PyUnicode_Type), 1, "seqi", 1))) __PYX_ERR(0, 194, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqj), (&PyUnicode_Type), 1, "seqj", 1))) __PYX_ERR(0, 194, __pyx_L1_error)
-  __pyx_r = __pyx_pf_12gotoh_counts_12gotoh_counts_6weighted_nonmatches(__pyx_self, __pyx_v_seqi, __pyx_v_seqj, __pyx_v_match, __pyx_v_mismatch, __pyx_v_gap_open, __pyx_v_gap_extend);
+  __pyx_r = __pyx_pf_5gotoh_5gotoh_6weighted_nonmatches(__pyx_self, __pyx_v_seqi, __pyx_v_seqj, __pyx_v_match, __pyx_v_mismatch, __pyx_v_gap_open, __pyx_v_gap_extend);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4631,11 +4631,11 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_7weighted_nonmatches(PyO
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_6weighted_nonmatches(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend) {
+static PyObject *__pyx_pf_5gotoh_5gotoh_6weighted_nonmatches(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_seqi, PyObject *__pyx_v_seqj, float __pyx_v_match, float __pyx_v_mismatch, float __pyx_v_gap_open, float __pyx_v_gap_extend) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   float __pyx_t_1;
-  struct __pyx_opt_args_12gotoh_counts_12gotoh_counts_weighted_nonmatches __pyx_t_2;
+  struct __pyx_opt_args_5gotoh_5gotoh_weighted_nonmatches __pyx_t_2;
   PyObject *__pyx_t_3 = NULL;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
@@ -4647,7 +4647,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_6weighted_nonmatches(CYT
   __pyx_t_2.mismatch = __pyx_v_mismatch;
   __pyx_t_2.gap_open = __pyx_v_gap_open;
   __pyx_t_2.gap_extend = __pyx_v_gap_extend;
-  __pyx_t_1 = __pyx_f_12gotoh_counts_12gotoh_counts_weighted_nonmatches(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
+  __pyx_t_1 = __pyx_f_5gotoh_5gotoh_weighted_nonmatches(__pyx_v_seqi, __pyx_v_seqj, 0, &__pyx_t_2); 
   __pyx_t_3 = PyFloat_FromDouble(__pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 194, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_r = __pyx_t_3;
@@ -4657,7 +4657,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_6weighted_nonmatches(CYT
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.weighted_nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.weighted_nonmatches", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -4665,19 +4665,19 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_6weighted_nonmatches(CYT
   return __pyx_r;
 }
 
-/* "gotoh_counts/gotoh_counts.pyx":209
+/* "gotoh/gotoh.pyx":209
  * @cython.boundscheck(False)
  * @cython.nonecheck(False)
- * def align(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):             # <<<<<<<<<<<<<<
+ * def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):             # <<<<<<<<<<<<<<
  *     """
  *     perform a global sequence alignment (needleman-wunsch) for multiple sequences
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_9align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_12gotoh_counts_12gotoh_counts_8align[] = "\n    perform a global sequence alignment (needleman-wunsch) for multiple sequences\n    ";
-static PyMethodDef __pyx_mdef_12gotoh_counts_12gotoh_counts_9align = {"align", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12gotoh_counts_12gotoh_counts_9align, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12gotoh_counts_12gotoh_counts_8align};
-static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_9align(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_5gotoh_5gotoh_9msa(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_5gotoh_5gotoh_8msa[] = "\n    perform a global sequence alignment (needleman-wunsch) for multiple sequences\n    ";
+static PyMethodDef __pyx_mdef_5gotoh_5gotoh_9msa = {"msa", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_5gotoh_5gotoh_9msa, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5gotoh_5gotoh_8msa};
+static PyObject *__pyx_pw_5gotoh_5gotoh_9msa(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyArrayObject *__pyx_v_seqj = 0;
   PyArrayObject *__pyx_v_seqi = 0;
   float __pyx_v_gap_open;
@@ -4689,7 +4689,7 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_9align(PyObject *__pyx_s
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("align (wrapper)", 0);
+  __Pyx_RefNannySetupContext("msa (wrapper)", 0);
   {
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_seqj,&__pyx_n_s_seqi,&__pyx_n_s_gap_open,&__pyx_n_s_gap_extend,&__pyx_n_s_matrix,&__pyx_n_s_visualize,0};
     PyObject* values[6] = {0,0,0,0,0,0};
@@ -4722,7 +4722,7 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_9align(PyObject *__pyx_s
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_seqi)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("align", 0, 2, 6, 1); __PYX_ERR(0, 209, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("msa", 0, 2, 6, 1); __PYX_ERR(0, 209, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -4750,7 +4750,7 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_9align(PyObject *__pyx_s
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "align") < 0)) __PYX_ERR(0, 209, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "msa") < 0)) __PYX_ERR(0, 209, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -4789,15 +4789,15 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_9align(PyObject *__pyx_s
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("align", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 209, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("msa", 0, 2, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 209, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.msa", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqj), __pyx_ptype_5numpy_ndarray, 1, "seqj", 0))) __PYX_ERR(0, 209, __pyx_L1_error)
   if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_seqi), __pyx_ptype_5numpy_ndarray, 1, "seqi", 0))) __PYX_ERR(0, 209, __pyx_L1_error)
-  __pyx_r = __pyx_pf_12gotoh_counts_12gotoh_counts_8align(__pyx_self, __pyx_v_seqj, __pyx_v_seqi, __pyx_v_gap_open, __pyx_v_gap_extend, __pyx_v_matrix, __pyx_v_visualize);
+  __pyx_r = __pyx_pf_5gotoh_5gotoh_8msa(__pyx_self, __pyx_v_seqj, __pyx_v_seqi, __pyx_v_gap_open, __pyx_v_gap_extend, __pyx_v_matrix, __pyx_v_visualize);
 
   /* function exit code */
   goto __pyx_L0;
@@ -4808,7 +4808,7 @@ static PyObject *__pyx_pw_12gotoh_counts_12gotoh_counts_9align(PyObject *__pyx_s
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_seqj, PyArrayObject *__pyx_v_seqi, float __pyx_v_gap_open, float __pyx_v_gap_extend, PyObject *__pyx_v_matrix, int __pyx_v_visualize) {
+static PyObject *__pyx_pf_5gotoh_5gotoh_8msa(CYTHON_UNUSED PyObject *__pyx_self, PyArrayObject *__pyx_v_seqj, PyArrayObject *__pyx_v_seqi, float __pyx_v_gap_open, float __pyx_v_gap_extend, PyObject *__pyx_v_matrix, int __pyx_v_visualize) {
   int __pyx_v_flip;
   size_t __pyx_v_max_j;
   size_t __pyx_v_max_i;
@@ -4903,7 +4903,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("align", 0);
+  __Pyx_RefNannySetupContext("msa", 0);
   __Pyx_INCREF((PyObject *)__pyx_v_seqj);
   __Pyx_INCREF((PyObject *)__pyx_v_seqi);
   __pyx_pybuffer_agap_i.pybuffer.buf = NULL;
@@ -4940,16 +4940,16 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_pybuffernd_seqi.rcbuffer = &__pyx_pybuffer_seqi;
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqj.rcbuffer->pybuffer, (PyObject*)__pyx_v_seqj, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 209, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqj.rcbuffer->pybuffer, (PyObject*)__pyx_v_seqj, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 209, __pyx_L1_error)
   }
   __pyx_pybuffernd_seqj.diminfo[0].strides = __pyx_pybuffernd_seqj.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_seqj.diminfo[0].shape = __pyx_pybuffernd_seqj.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_seqj.diminfo[1].strides = __pyx_pybuffernd_seqj.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_seqj.diminfo[1].shape = __pyx_pybuffernd_seqj.rcbuffer->pybuffer.shape[1];
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqi.rcbuffer->pybuffer, (PyObject*)__pyx_v_seqi, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 209, __pyx_L1_error)
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqi.rcbuffer->pybuffer, (PyObject*)__pyx_v_seqi, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) __PYX_ERR(0, 209, __pyx_L1_error)
   }
   __pyx_pybuffernd_seqi.diminfo[0].strides = __pyx_pybuffernd_seqi.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_seqi.diminfo[0].shape = __pyx_pybuffernd_seqi.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_seqi.diminfo[1].strides = __pyx_pybuffernd_seqi.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_seqi.diminfo[1].shape = __pyx_pybuffernd_seqi.rcbuffer->pybuffer.shape[1];
 
-  /* "gotoh_counts/gotoh_counts.pyx":213
+  /* "gotoh/gotoh.pyx":213
  *     perform a global sequence alignment (needleman-wunsch) for multiple sequences
  *     """
  *     cdef bint flip = 0             # <<<<<<<<<<<<<<
@@ -4958,7 +4958,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_v_flip = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":215
+  /* "gotoh/gotoh.pyx":215
  *     cdef bint flip = 0
  * 
  *     cdef size_t max_j = seqj.shape[0]             # <<<<<<<<<<<<<<
@@ -4967,7 +4967,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_v_max_j = (__pyx_v_seqj->dimensions[0]);
 
-  /* "gotoh_counts/gotoh_counts.pyx":216
+  /* "gotoh/gotoh.pyx":216
  * 
  *     cdef size_t max_j = seqj.shape[0]
  *     cdef size_t max_i = seqi.shape[0]             # <<<<<<<<<<<<<<
@@ -4976,7 +4976,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_v_max_i = (__pyx_v_seqi->dimensions[0]);
 
-  /* "gotoh_counts/gotoh_counts.pyx":217
+  /* "gotoh/gotoh.pyx":217
  *     cdef size_t max_j = seqj.shape[0]
  *     cdef size_t max_i = seqi.shape[0]
  *     if max_i == max_j == 0:             # <<<<<<<<<<<<<<
@@ -4990,7 +4990,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "gotoh_counts/gotoh_counts.pyx":218
+    /* "gotoh/gotoh.pyx":218
  *     cdef size_t max_i = seqi.shape[0]
  *     if max_i == max_j == 0:
  *         return None             # <<<<<<<<<<<<<<
@@ -5001,7 +5001,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __pyx_r = Py_None; __Pyx_INCREF(Py_None);
     goto __pyx_L0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":217
+    /* "gotoh/gotoh.pyx":217
  *     cdef size_t max_j = seqj.shape[0]
  *     cdef size_t max_i = seqi.shape[0]
  *     if max_i == max_j == 0:             # <<<<<<<<<<<<<<
@@ -5010,7 +5010,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":220
+  /* "gotoh/gotoh.pyx":220
  *         return None
  * 
  *     if max_j > max_i:             # <<<<<<<<<<<<<<
@@ -5020,7 +5020,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_2 = ((__pyx_v_max_j > __pyx_v_max_i) != 0);
   if (__pyx_t_2) {
 
-    /* "gotoh_counts/gotoh_counts.pyx":221
+    /* "gotoh/gotoh.pyx":221
  * 
  *     if max_j > max_i:
  *         flip = 1             # <<<<<<<<<<<<<<
@@ -5029,7 +5029,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
     __pyx_v_flip = 1;
 
-    /* "gotoh_counts/gotoh_counts.pyx":222
+    /* "gotoh/gotoh.pyx":222
  *     if max_j > max_i:
  *         flip = 1
  *         seqi, seqj = seqj, seqi             # <<<<<<<<<<<<<<
@@ -5041,10 +5041,10 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_seqi.rcbuffer->pybuffer);
-      __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqi.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_3), &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+      __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqi.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_3), &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
       if (unlikely(__pyx_t_5 < 0)) {
         PyErr_Fetch(&__pyx_t_6, &__pyx_t_7, &__pyx_t_8);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqi.rcbuffer->pybuffer, (PyObject*)__pyx_v_seqi, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqi.rcbuffer->pybuffer, (PyObject*)__pyx_v_seqi, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_6); Py_XDECREF(__pyx_t_7); Py_XDECREF(__pyx_t_8);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -5060,10 +5060,10 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     {
       __Pyx_BufFmt_StackElem __pyx_stack[1];
       __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_seqj.rcbuffer->pybuffer);
-      __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqj.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_4), &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
+      __pyx_t_5 = __Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqj.rcbuffer->pybuffer, (PyObject*)((PyArrayObject *)__pyx_t_4), &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack);
       if (unlikely(__pyx_t_5 < 0)) {
         PyErr_Fetch(&__pyx_t_3, &__pyx_t_8, &__pyx_t_7);
-        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqj.rcbuffer->pybuffer, (PyObject*)__pyx_v_seqj, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+        if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_seqj.rcbuffer->pybuffer, (PyObject*)__pyx_v_seqj, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_t, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
           Py_XDECREF(__pyx_t_3); Py_XDECREF(__pyx_t_8); Py_XDECREF(__pyx_t_7);
           __Pyx_RaiseBufferFallbackError();
         } else {
@@ -5077,7 +5077,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __pyx_v_seqj = ((PyArrayObject *)__pyx_t_4);
     __pyx_t_4 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":223
+    /* "gotoh/gotoh.pyx":223
  *         flip = 1
  *         seqi, seqj = seqj, seqi
  *         max_i, max_j = max_j, max_i             # <<<<<<<<<<<<<<
@@ -5089,7 +5089,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __pyx_v_max_i = __pyx_t_9;
     __pyx_v_max_j = __pyx_t_10;
 
-    /* "gotoh_counts/gotoh_counts.pyx":220
+    /* "gotoh/gotoh.pyx":220
  *         return None
  * 
  *     if max_j > max_i:             # <<<<<<<<<<<<<<
@@ -5098,7 +5098,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":227
+  /* "gotoh/gotoh.pyx":227
  * 
  *     # need to initialize j for the case when it's a zero-length string.
  *     cdef size_t i = 0, j = 0, seqlen, p             # <<<<<<<<<<<<<<
@@ -5108,7 +5108,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_v_i = 0;
   __pyx_v_j = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":231
+  /* "gotoh/gotoh.pyx":231
  * 
  *     #cdef np.ndarray[DTYPE_t, ndim=1] ci, cj
  *     cdef int zero=0, one=1             # <<<<<<<<<<<<<<
@@ -5118,7 +5118,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_v_zero = 0;
   __pyx_v_one = 1;
 
-  /* "gotoh_counts/gotoh_counts.pyx":233
+  /* "gotoh/gotoh.pyx":233
  *     cdef int zero=0, one=1
  * 
  *     assert gap_extend <= 0, "gap_extend penalty must be <= 0"             # <<<<<<<<<<<<<<
@@ -5134,7 +5134,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   }
   #endif
 
-  /* "gotoh_counts/gotoh_counts.pyx":234
+  /* "gotoh/gotoh.pyx":234
  * 
  *     assert gap_extend <= 0, "gap_extend penalty must be <= 0"
  *     assert gap_open <= 0, "gap_open must be <= 0"             # <<<<<<<<<<<<<<
@@ -5150,7 +5150,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   }
   #endif
 
-  /* "gotoh_counts/gotoh_counts.pyx":236
+  /* "gotoh/gotoh.pyx":236
  *     assert gap_open <= 0, "gap_open must be <= 0"
  * 
  *     cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_i = np.ones((max_i + 1,), dtype=np.int8)             # <<<<<<<<<<<<<<
@@ -5192,7 +5192,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_16 = ((PyArrayObject *)__pyx_t_15);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_agap_i.rcbuffer->pybuffer, (PyObject*)__pyx_t_16, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_agap_i.rcbuffer->pybuffer, (PyObject*)__pyx_t_16, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_BOOL, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_agap_i = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 236, __pyx_L1_error)
     } else {__pyx_pybuffernd_agap_i.diminfo[0].strides = __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_agap_i.diminfo[0].shape = __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.shape[0];
@@ -5202,7 +5202,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_v_agap_i = ((PyArrayObject *)__pyx_t_15);
   __pyx_t_15 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":237
+  /* "gotoh/gotoh.pyx":237
  * 
  *     cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_i = np.ones((max_i + 1,), dtype=np.int8)
  *     cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_j = np.ones((max_j + 1,), dtype=np.int8)             # <<<<<<<<<<<<<<
@@ -5244,7 +5244,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_17 = ((PyArrayObject *)__pyx_t_14);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_agap_j.rcbuffer->pybuffer, (PyObject*)__pyx_t_17, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_agap_j.rcbuffer->pybuffer, (PyObject*)__pyx_t_17, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_BOOL, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 1, 0, __pyx_stack) == -1)) {
       __pyx_v_agap_j = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 237, __pyx_L1_error)
     } else {__pyx_pybuffernd_agap_j.diminfo[0].strides = __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_agap_j.diminfo[0].shape = __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.shape[0];
@@ -5254,7 +5254,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_v_agap_j = ((PyArrayObject *)__pyx_t_14);
   __pyx_t_14 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":239
+  /* "gotoh/gotoh.pyx":239
  *     cdef np.ndarray[DTYPE_BOOL, ndim=1] agap_j = np.ones((max_j + 1,), dtype=np.int8)
  * 
  *     cdef np.ndarray[np.float32_t, ndim=2] score = np.empty((max_i + 1, max_j + 1), dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -5311,7 +5311,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_v_score = ((PyArrayObject *)__pyx_t_12);
   __pyx_t_12 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":240
+  /* "gotoh/gotoh.pyx":240
  * 
  *     cdef np.ndarray[np.float32_t, ndim=2] score = np.empty((max_i + 1, max_j + 1), dtype=np.float32)
  *     cdef np.ndarray[DTYPE_UINT, ndim=2] pointer = np.empty((max_i + 1, max_j + 1), dtype=np.uint)             # <<<<<<<<<<<<<<
@@ -5358,7 +5358,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_19 = ((PyArrayObject *)__pyx_t_14);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pointer.rcbuffer->pybuffer, (PyObject*)__pyx_t_19, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 2, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_pointer.rcbuffer->pybuffer, (PyObject*)__pyx_t_19, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_UINT, PyBUF_FORMAT| PyBUF_STRIDES| PyBUF_WRITABLE, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_pointer = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 240, __pyx_L1_error)
     } else {__pyx_pybuffernd_pointer.diminfo[0].strides = __pyx_pybuffernd_pointer.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_pointer.diminfo[0].shape = __pyx_pybuffernd_pointer.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_pointer.diminfo[1].strides = __pyx_pybuffernd_pointer.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_pointer.diminfo[1].shape = __pyx_pybuffernd_pointer.rcbuffer->pybuffer.shape[1];
@@ -5368,7 +5368,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_v_pointer = ((PyArrayObject *)__pyx_t_14);
   __pyx_t_14 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":242
+  /* "gotoh/gotoh.pyx":242
  *     cdef np.ndarray[DTYPE_UINT, ndim=2] pointer = np.empty((max_i + 1, max_j + 1), dtype=np.uint)
  * 
  *     cdef np.ndarray[np.float32_t, ndim=2] scoring_matrix = matrix             # <<<<<<<<<<<<<<
@@ -5389,7 +5389,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_v_scoring_matrix = ((PyArrayObject *)__pyx_t_14);
   __pyx_t_14 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":244
+  /* "gotoh/gotoh.pyx":244
  *     cdef np.ndarray[np.float32_t, ndim=2] scoring_matrix = matrix
  * 
  *     pointer[0, 0] = NONE             # <<<<<<<<<<<<<<
@@ -5398,9 +5398,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_t_20 = 0;
   __pyx_t_21 = 0;
-  *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_21, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_NONE;
+  *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_21, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_NONE;
 
-  /* "gotoh_counts/gotoh_counts.pyx":245
+  /* "gotoh/gotoh.pyx":245
  * 
  *     pointer[0, 0] = NONE
  *     score[0, 0] = 0             # <<<<<<<<<<<<<<
@@ -5411,31 +5411,31 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_20 = 0;
   *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_21, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_20, __pyx_pybuffernd_score.diminfo[1].strides) = 0.0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":247
+  /* "gotoh/gotoh.pyx":247
  *     score[0, 0] = 0
  * 
  *     pointer[0, 1:] = LEFT             # <<<<<<<<<<<<<<
  *     pointer[1:, 0] = UP
  * 
  */
-  __pyx_t_14 = __Pyx_PyInt_FromSize_t(__pyx_v_12gotoh_counts_12gotoh_counts_LEFT); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyInt_FromSize_t(__pyx_v_5gotoh_5gotoh_LEFT); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
   if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_pointer), __pyx_tuple__2, __pyx_t_14) < 0)) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":248
+  /* "gotoh/gotoh.pyx":248
  * 
  *     pointer[0, 1:] = LEFT
  *     pointer[1:, 0] = UP             # <<<<<<<<<<<<<<
  * 
  *     score[0, 1:] = gap_open + gap_extend * np.arange(0, max_j, dtype=np.float32)
  */
-  __pyx_t_14 = __Pyx_PyInt_FromSize_t(__pyx_v_12gotoh_counts_12gotoh_counts_UP); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 248, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyInt_FromSize_t(__pyx_v_5gotoh_5gotoh_UP); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
   if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_pointer), __pyx_tuple__3, __pyx_t_14) < 0)) __PYX_ERR(0, 248, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":250
+  /* "gotoh/gotoh.pyx":250
  *     pointer[1:, 0] = UP
  * 
  *     score[0, 1:] = gap_open + gap_extend * np.arange(0, max_j, dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -5486,7 +5486,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_score), __pyx_tuple__2, __pyx_t_23) < 0)) __PYX_ERR(0, 250, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_23); __pyx_t_23 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":251
+  /* "gotoh/gotoh.pyx":251
  * 
  *     score[0, 1:] = gap_open + gap_extend * np.arange(0, max_j, dtype=np.float32)
  *     score[1:, 0] = gap_open + gap_extend * np.arange(0, max_i, dtype=np.float32)             # <<<<<<<<<<<<<<
@@ -5537,7 +5537,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   if (unlikely(PyObject_SetItem(((PyObject *)__pyx_v_score), __pyx_tuple__3, __pyx_t_22) < 0)) __PYX_ERR(0, 251, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":253
+  /* "gotoh/gotoh.pyx":253
  *     score[1:, 0] = gap_open + gap_extend * np.arange(0, max_i, dtype=np.float32)
  * 
  *     agap_i[0] = zero             # <<<<<<<<<<<<<<
@@ -5545,9 +5545,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  *     for i in range(1, max_i + 1):
  */
   __pyx_t_20 = 0;
-  *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
+  *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
 
-  /* "gotoh_counts/gotoh_counts.pyx":255
+  /* "gotoh/gotoh.pyx":255
  *     agap_i[0] = zero
  * 
  *     for i in range(1, max_i + 1):             # <<<<<<<<<<<<<<
@@ -5559,7 +5559,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   for (__pyx_t_24 = 1; __pyx_t_24 < __pyx_t_9; __pyx_t_24+=1) {
     __pyx_v_i = __pyx_t_24;
 
-    /* "gotoh_counts/gotoh_counts.pyx":256
+    /* "gotoh/gotoh.pyx":256
  * 
  *     for i in range(1, max_i + 1):
  *         ci = set(seqi[<size_t>(i - 1)])             # <<<<<<<<<<<<<<
@@ -5575,7 +5575,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __Pyx_XDECREF_SET(__pyx_v_ci, ((PyObject*)__pyx_t_14));
     __pyx_t_14 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":258
+    /* "gotoh/gotoh.pyx":258
  *         ci = set(seqi[<size_t>(i - 1)])
  * 
  *         agap_j[0] = zero             # <<<<<<<<<<<<<<
@@ -5583,9 +5583,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  *             agap_j[j] = one
  */
     __pyx_t_20 = 0;
-    *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_agap_j.diminfo[0].strides) = __pyx_v_zero;
+    *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_20, __pyx_pybuffernd_agap_j.diminfo[0].strides) = __pyx_v_zero;
 
-    /* "gotoh_counts/gotoh_counts.pyx":259
+    /* "gotoh/gotoh.pyx":259
  * 
  *         agap_j[0] = zero
  *         for j in range(1, max_j + 1):             # <<<<<<<<<<<<<<
@@ -5597,7 +5597,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     for (__pyx_t_27 = 1; __pyx_t_27 < __pyx_t_26; __pyx_t_27+=1) {
       __pyx_v_j = __pyx_t_27;
 
-      /* "gotoh_counts/gotoh_counts.pyx":260
+      /* "gotoh/gotoh.pyx":260
  *         agap_j[0] = zero
  *         for j in range(1, max_j + 1):
  *             agap_j[j] = one             # <<<<<<<<<<<<<<
@@ -5605,9 +5605,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  * 
  */
       __pyx_t_28 = __pyx_v_j;
-      *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_agap_j.diminfo[0].strides) = __pyx_v_one;
+      *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_agap_j.diminfo[0].strides) = __pyx_v_one;
 
-      /* "gotoh_counts/gotoh_counts.pyx":261
+      /* "gotoh/gotoh.pyx":261
  *         for j in range(1, max_j + 1):
  *             agap_j[j] = one
  *             cj = set(seqj[<size_t>(j - 1)])             # <<<<<<<<<<<<<<
@@ -5623,7 +5623,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __Pyx_XDECREF_SET(__pyx_v_cj, ((PyObject*)__pyx_t_22));
       __pyx_t_22 = 0;
 
-      /* "gotoh_counts/gotoh_counts.pyx":263
+      /* "gotoh/gotoh.pyx":263
  *             cj = set(seqj[<size_t>(j - 1)])
  * 
  *             if matrix is None:             # <<<<<<<<<<<<<<
@@ -5634,7 +5634,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __pyx_t_1 = (__pyx_t_2 != 0);
       if (__pyx_t_1) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":264
+        /* "gotoh/gotoh.pyx":264
  * 
  *             if matrix is None:
  *                 tscore = 1 if (ci & cj) else -1 # Most basic function             # <<<<<<<<<<<<<<
@@ -5652,7 +5652,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         }
         __pyx_v_tscore = __pyx_t_29;
 
-        /* "gotoh_counts/gotoh_counts.pyx":263
+        /* "gotoh/gotoh.pyx":263
  *             cj = set(seqj[<size_t>(j - 1)])
  * 
  *             if matrix is None:             # <<<<<<<<<<<<<<
@@ -5662,7 +5662,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         goto __pyx_L9;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":266
+      /* "gotoh/gotoh.pyx":266
  *                 tscore = 1 if (ci & cj) else -1 # Most basic function
  *             else:
  *                 tscore = np.NINF             # <<<<<<<<<<<<<<
@@ -5679,7 +5679,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
         __pyx_v_tscore = __pyx_t_29;
 
-        /* "gotoh_counts/gotoh_counts.pyx":267
+        /* "gotoh/gotoh.pyx":267
  *             else:
  *                 tscore = np.NINF
  *                 for token_i in ci:             # <<<<<<<<<<<<<<
@@ -5700,7 +5700,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           __Pyx_XDECREF_SET(__pyx_v_token_i, __pyx_t_22);
           __pyx_t_22 = 0;
 
-          /* "gotoh_counts/gotoh_counts.pyx":268
+          /* "gotoh/gotoh.pyx":268
  *                 tscore = np.NINF
  *                 for token_i in ci:
  *                     for token_j in cj:             # <<<<<<<<<<<<<<
@@ -5721,7 +5721,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
             __Pyx_XDECREF_SET(__pyx_v_token_j, __pyx_t_23);
             __pyx_t_23 = 0;
 
-            /* "gotoh_counts/gotoh_counts.pyx":269
+            /* "gotoh/gotoh.pyx":269
  *                 for token_i in ci:
  *                     for token_j in cj:
  *                         if token_i >= token_j:             # <<<<<<<<<<<<<<
@@ -5733,7 +5733,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
             __Pyx_DECREF(__pyx_t_23); __pyx_t_23 = 0;
             if (__pyx_t_1) {
 
-              /* "gotoh_counts/gotoh_counts.pyx":270
+              /* "gotoh/gotoh.pyx":270
  *                     for token_j in cj:
  *                         if token_i >= token_j:
  *                             myscore = scoring_matrix[ token_i,token_j ]             # <<<<<<<<<<<<<<
@@ -5754,7 +5754,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
               __Pyx_XDECREF_SET(__pyx_v_myscore, __pyx_t_15);
               __pyx_t_15 = 0;
 
-              /* "gotoh_counts/gotoh_counts.pyx":269
+              /* "gotoh/gotoh.pyx":269
  *                 for token_i in ci:
  *                     for token_j in cj:
  *                         if token_i >= token_j:             # <<<<<<<<<<<<<<
@@ -5764,7 +5764,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
               goto __pyx_L14;
             }
 
-            /* "gotoh_counts/gotoh_counts.pyx":272
+            /* "gotoh/gotoh.pyx":272
  *                             myscore = scoring_matrix[ token_i,token_j ]
  *                         else:
  *                             myscore = scoring_matrix[ token_j,token_i ]             # <<<<<<<<<<<<<<
@@ -5788,7 +5788,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
             }
             __pyx_L14:;
 
-            /* "gotoh_counts/gotoh_counts.pyx":274
+            /* "gotoh/gotoh.pyx":274
  *                             myscore = scoring_matrix[ token_j,token_i ]
  * 
  *                         tscore = max(tscore,myscore)             # <<<<<<<<<<<<<<
@@ -5824,7 +5824,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       }
       __pyx_L9:;
 
-      /* "gotoh_counts/gotoh_counts.pyx":277
+      /* "gotoh/gotoh.pyx":277
  * 
  * 
  *             diag_score = score[<size_t>(i - 1), <size_t>(j - 1)] + tscore             # <<<<<<<<<<<<<<
@@ -5835,7 +5835,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __pyx_t_36 = ((size_t)(__pyx_v_j - 1));
       __pyx_v_diag_score = ((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_score.diminfo[1].strides)) + __pyx_v_tscore);
 
-      /* "gotoh_counts/gotoh_counts.pyx":278
+      /* "gotoh/gotoh.pyx":278
  * 
  *             diag_score = score[<size_t>(i - 1), <size_t>(j - 1)] + tscore
  *             up_score   = score[<size_t>(i - 1), j] + (gap_open if agap_i[<size_t>(i - 1)] == zero else gap_extend)             # <<<<<<<<<<<<<<
@@ -5845,14 +5845,14 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __pyx_t_36 = ((size_t)(__pyx_v_i - 1));
       __pyx_t_28 = __pyx_v_j;
       __pyx_t_37 = ((size_t)(__pyx_v_i - 1));
-      if ((((*__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_37, __pyx_pybuffernd_agap_i.diminfo[0].strides)) == __pyx_v_zero) != 0)) {
+      if ((((*__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_37, __pyx_pybuffernd_agap_i.diminfo[0].strides)) == __pyx_v_zero) != 0)) {
         __pyx_t_29 = __pyx_v_gap_open;
       } else {
         __pyx_t_29 = __pyx_v_gap_extend;
       }
       __pyx_v_up_score = ((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_score.diminfo[1].strides)) + __pyx_t_29);
 
-      /* "gotoh_counts/gotoh_counts.pyx":279
+      /* "gotoh/gotoh.pyx":279
  *             diag_score = score[<size_t>(i - 1), <size_t>(j - 1)] + tscore
  *             up_score   = score[<size_t>(i - 1), j] + (gap_open if agap_i[<size_t>(i - 1)] == zero else gap_extend)
  *             left_score = score[i, <size_t>(j - 1)] + (gap_open if agap_j[<size_t>(j - 1)] == zero else gap_extend)             # <<<<<<<<<<<<<<
@@ -5862,14 +5862,14 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __pyx_t_28 = __pyx_v_i;
       __pyx_t_36 = ((size_t)(__pyx_v_j - 1));
       __pyx_t_37 = ((size_t)(__pyx_v_j - 1));
-      if ((((*__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_37, __pyx_pybuffernd_agap_j.diminfo[0].strides)) == __pyx_v_zero) != 0)) {
+      if ((((*__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_j.rcbuffer->pybuffer.buf, __pyx_t_37, __pyx_pybuffernd_agap_j.diminfo[0].strides)) == __pyx_v_zero) != 0)) {
         __pyx_t_29 = __pyx_v_gap_open;
       } else {
         __pyx_t_29 = __pyx_v_gap_extend;
       }
       __pyx_v_left_score = ((*__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_score.diminfo[1].strides)) + __pyx_t_29);
 
-      /* "gotoh_counts/gotoh_counts.pyx":287
+      /* "gotoh/gotoh.pyx":287
  *             this forces gaps to the ends of the aligments.
  *             """
  *             if diag_score == left_score:             # <<<<<<<<<<<<<<
@@ -5879,7 +5879,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __pyx_t_1 = ((__pyx_v_diag_score == __pyx_v_left_score) != 0);
       if (__pyx_t_1) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":290
+        /* "gotoh/gotoh.pyx":290
  *                 # so here. if we're at the end we choose a gap.
  *                 # otherwise, we choose diag
  *                 if i == max_i or i == 1:             # <<<<<<<<<<<<<<
@@ -5897,7 +5897,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         __pyx_L17_bool_binop_done:;
         if (__pyx_t_1) {
 
-          /* "gotoh_counts/gotoh_counts.pyx":291
+          /* "gotoh/gotoh.pyx":291
  *                 # otherwise, we choose diag
  *                 if i == max_i or i == 1:
  *                     score[i, j] = left_score             # <<<<<<<<<<<<<<
@@ -5908,7 +5908,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           __pyx_t_28 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_left_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":292
+          /* "gotoh/gotoh.pyx":292
  *                 if i == max_i or i == 1:
  *                     score[i, j] = left_score
  *                     pointer[i, j] = LEFT             # <<<<<<<<<<<<<<
@@ -5917,9 +5917,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
           __pyx_t_28 = __pyx_v_i;
           __pyx_t_36 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_LEFT;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_LEFT;
 
-          /* "gotoh_counts/gotoh_counts.pyx":290
+          /* "gotoh/gotoh.pyx":290
  *                 # so here. if we're at the end we choose a gap.
  *                 # otherwise, we choose diag
  *                 if i == max_i or i == 1:             # <<<<<<<<<<<<<<
@@ -5929,7 +5929,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           goto __pyx_L16;
         }
 
-        /* "gotoh_counts/gotoh_counts.pyx":294
+        /* "gotoh/gotoh.pyx":294
  *                     pointer[i, j] = LEFT
  *                 else: # we want a diagonal
  *                     score[i, j] = diag_score             # <<<<<<<<<<<<<<
@@ -5941,7 +5941,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           __pyx_t_28 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_diag_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":295
+          /* "gotoh/gotoh.pyx":295
  *                 else: # we want a diagonal
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG             # <<<<<<<<<<<<<<
@@ -5950,9 +5950,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
           __pyx_t_28 = __pyx_v_i;
           __pyx_t_36 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_DIAG;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_DIAG;
 
-          /* "gotoh_counts/gotoh_counts.pyx":296
+          /* "gotoh/gotoh.pyx":296
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero             # <<<<<<<<<<<<<<
@@ -5960,11 +5960,11 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  *                 if j == max_j or j == 1:
  */
           __pyx_t_36 = __pyx_v_i;
-          *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
+          *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
         }
         __pyx_L16:;
 
-        /* "gotoh_counts/gotoh_counts.pyx":287
+        /* "gotoh/gotoh.pyx":287
  *             this forces gaps to the ends of the aligments.
  *             """
  *             if diag_score == left_score:             # <<<<<<<<<<<<<<
@@ -5974,7 +5974,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         goto __pyx_L15;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":297
+      /* "gotoh/gotoh.pyx":297
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero
  *             elif diag_score == up_score:             # <<<<<<<<<<<<<<
@@ -5984,7 +5984,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __pyx_t_1 = ((__pyx_v_diag_score == __pyx_v_up_score) != 0);
       if (__pyx_t_1) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":298
+        /* "gotoh/gotoh.pyx":298
  *                     agap_i[i] = zero
  *             elif diag_score == up_score:
  *                 if j == max_j or j == 1:             # <<<<<<<<<<<<<<
@@ -6002,7 +6002,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         __pyx_L20_bool_binop_done:;
         if (__pyx_t_1) {
 
-          /* "gotoh_counts/gotoh_counts.pyx":299
+          /* "gotoh/gotoh.pyx":299
  *             elif diag_score == up_score:
  *                 if j == max_j or j == 1:
  *                     score[i, j] = up_score             # <<<<<<<<<<<<<<
@@ -6013,7 +6013,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           __pyx_t_28 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_up_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":300
+          /* "gotoh/gotoh.pyx":300
  *                 if j == max_j or j == 1:
  *                     score[i, j] = up_score
  *                     pointer[i, j] = UP             # <<<<<<<<<<<<<<
@@ -6022,9 +6022,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
           __pyx_t_28 = __pyx_v_i;
           __pyx_t_36 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_UP;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_UP;
 
-          /* "gotoh_counts/gotoh_counts.pyx":298
+          /* "gotoh/gotoh.pyx":298
  *                     agap_i[i] = zero
  *             elif diag_score == up_score:
  *                 if j == max_j or j == 1:             # <<<<<<<<<<<<<<
@@ -6034,7 +6034,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           goto __pyx_L19;
         }
 
-        /* "gotoh_counts/gotoh_counts.pyx":302
+        /* "gotoh/gotoh.pyx":302
  *                     pointer[i, j] = UP
  *                 else: # we want a diagonal
  *                     score[i, j] = diag_score             # <<<<<<<<<<<<<<
@@ -6046,7 +6046,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           __pyx_t_28 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_diag_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":303
+          /* "gotoh/gotoh.pyx":303
  *                 else: # we want a diagonal
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG             # <<<<<<<<<<<<<<
@@ -6055,9 +6055,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
           __pyx_t_28 = __pyx_v_i;
           __pyx_t_36 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_DIAG;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_DIAG;
 
-          /* "gotoh_counts/gotoh_counts.pyx":304
+          /* "gotoh/gotoh.pyx":304
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero             # <<<<<<<<<<<<<<
@@ -6065,11 +6065,11 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  * 
  */
           __pyx_t_36 = __pyx_v_i;
-          *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
+          *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
         }
         __pyx_L19:;
 
-        /* "gotoh_counts/gotoh_counts.pyx":297
+        /* "gotoh/gotoh.pyx":297
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero
  *             elif diag_score == up_score:             # <<<<<<<<<<<<<<
@@ -6079,7 +6079,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         goto __pyx_L15;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":307
+      /* "gotoh/gotoh.pyx":307
  *             # end of ambiguous score checks.
  * 
  *             elif up_score > diag_score: #checked.             # <<<<<<<<<<<<<<
@@ -6089,7 +6089,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __pyx_t_1 = ((__pyx_v_up_score > __pyx_v_diag_score) != 0);
       if (__pyx_t_1) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":308
+        /* "gotoh/gotoh.pyx":308
  * 
  *             elif up_score > diag_score: #checked.
  *                 if up_score > left_score:             # <<<<<<<<<<<<<<
@@ -6099,7 +6099,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         __pyx_t_1 = ((__pyx_v_up_score > __pyx_v_left_score) != 0);
         if (__pyx_t_1) {
 
-          /* "gotoh_counts/gotoh_counts.pyx":309
+          /* "gotoh/gotoh.pyx":309
  *             elif up_score > diag_score: #checked.
  *                 if up_score > left_score:
  *                     score[i, j]  = up_score             # <<<<<<<<<<<<<<
@@ -6110,7 +6110,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           __pyx_t_28 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_up_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":310
+          /* "gotoh/gotoh.pyx":310
  *                 if up_score > left_score:
  *                     score[i, j]  = up_score
  *                     pointer[i, j] = UP             # <<<<<<<<<<<<<<
@@ -6119,9 +6119,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
           __pyx_t_28 = __pyx_v_i;
           __pyx_t_36 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_UP;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_UP;
 
-          /* "gotoh_counts/gotoh_counts.pyx":308
+          /* "gotoh/gotoh.pyx":308
  * 
  *             elif up_score > diag_score: #checked.
  *                 if up_score > left_score:             # <<<<<<<<<<<<<<
@@ -6131,7 +6131,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           goto __pyx_L22;
         }
 
-        /* "gotoh_counts/gotoh_counts.pyx":312
+        /* "gotoh/gotoh.pyx":312
  *                     pointer[i, j] = UP
  *                 else:
  *                     score[i, j]   = left_score             # <<<<<<<<<<<<<<
@@ -6143,7 +6143,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           __pyx_t_28 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_left_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":313
+          /* "gotoh/gotoh.pyx":313
  *                 else:
  *                     score[i, j]   = left_score
  *                     pointer[i, j] = LEFT             # <<<<<<<<<<<<<<
@@ -6152,11 +6152,11 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
           __pyx_t_28 = __pyx_v_i;
           __pyx_t_36 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_LEFT;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_LEFT;
         }
         __pyx_L22:;
 
-        /* "gotoh_counts/gotoh_counts.pyx":307
+        /* "gotoh/gotoh.pyx":307
  *             # end of ambiguous score checks.
  * 
  *             elif up_score > diag_score: #checked.             # <<<<<<<<<<<<<<
@@ -6166,7 +6166,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         goto __pyx_L15;
       }
 
-      /* "gotoh_counts/gotoh_counts.pyx":314
+      /* "gotoh/gotoh.pyx":314
  *                     score[i, j]   = left_score
  *                     pointer[i, j] = LEFT
  *             elif diag_score > up_score:             # <<<<<<<<<<<<<<
@@ -6176,7 +6176,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __pyx_t_1 = ((__pyx_v_diag_score > __pyx_v_up_score) != 0);
       if (__pyx_t_1) {
 
-        /* "gotoh_counts/gotoh_counts.pyx":315
+        /* "gotoh/gotoh.pyx":315
  *                     pointer[i, j] = LEFT
  *             elif diag_score > up_score:
  *                 if left_score > diag_score:             # <<<<<<<<<<<<<<
@@ -6186,7 +6186,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
         __pyx_t_1 = ((__pyx_v_left_score > __pyx_v_diag_score) != 0);
         if (__pyx_t_1) {
 
-          /* "gotoh_counts/gotoh_counts.pyx":316
+          /* "gotoh/gotoh.pyx":316
  *             elif diag_score > up_score:
  *                 if left_score > diag_score:
  *                     score[i, j] = left_score             # <<<<<<<<<<<<<<
@@ -6197,7 +6197,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           __pyx_t_28 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_left_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":317
+          /* "gotoh/gotoh.pyx":317
  *                 if left_score > diag_score:
  *                     score[i, j] = left_score
  *                     pointer[i, j] = LEFT             # <<<<<<<<<<<<<<
@@ -6206,9 +6206,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
           __pyx_t_28 = __pyx_v_i;
           __pyx_t_36 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_LEFT;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_LEFT;
 
-          /* "gotoh_counts/gotoh_counts.pyx":315
+          /* "gotoh/gotoh.pyx":315
  *                     pointer[i, j] = LEFT
  *             elif diag_score > up_score:
  *                 if left_score > diag_score:             # <<<<<<<<<<<<<<
@@ -6218,7 +6218,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           goto __pyx_L23;
         }
 
-        /* "gotoh_counts/gotoh_counts.pyx":319
+        /* "gotoh/gotoh.pyx":319
  *                     pointer[i, j] = LEFT
  *                 else:
  *                     score[i, j] = diag_score             # <<<<<<<<<<<<<<
@@ -6230,7 +6230,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
           __pyx_t_28 = __pyx_v_j;
           *__Pyx_BufPtrStrided2d(__pyx_t_5numpy_float32_t *, __pyx_pybuffernd_score.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_score.diminfo[0].strides, __pyx_t_28, __pyx_pybuffernd_score.diminfo[1].strides) = __pyx_v_diag_score;
 
-          /* "gotoh_counts/gotoh_counts.pyx":320
+          /* "gotoh/gotoh.pyx":320
  *                 else:
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG             # <<<<<<<<<<<<<<
@@ -6239,9 +6239,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
           __pyx_t_28 = __pyx_v_i;
           __pyx_t_36 = __pyx_v_j;
-          *__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_12gotoh_counts_12gotoh_counts_DIAG;
+          *__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_28, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_36, __pyx_pybuffernd_pointer.diminfo[1].strides) = __pyx_v_5gotoh_5gotoh_DIAG;
 
-          /* "gotoh_counts/gotoh_counts.pyx":321
+          /* "gotoh/gotoh.pyx":321
  *                     score[i, j] = diag_score
  *                     pointer[i, j] = DIAG
  *                     agap_i[i] = zero             # <<<<<<<<<<<<<<
@@ -6249,11 +6249,11 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  *     seqlen = max_i + max_j
  */
           __pyx_t_36 = __pyx_v_i;
-          *__Pyx_BufPtrStrided1d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
+          *__Pyx_BufPtrStrided1d(__pyx_t_5gotoh_5gotoh_DTYPE_BOOL *, __pyx_pybuffernd_agap_i.rcbuffer->pybuffer.buf, __pyx_t_36, __pyx_pybuffernd_agap_i.diminfo[0].strides) = __pyx_v_zero;
         }
         __pyx_L23:;
 
-        /* "gotoh_counts/gotoh_counts.pyx":314
+        /* "gotoh/gotoh.pyx":314
  *                     score[i, j]   = left_score
  *                     pointer[i, j] = LEFT
  *             elif diag_score > up_score:             # <<<<<<<<<<<<<<
@@ -6265,7 +6265,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     }
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":323
+  /* "gotoh/gotoh.pyx":323
  *                     agap_i[i] = zero
  * 
  *     seqlen = max_i + max_j             # <<<<<<<<<<<<<<
@@ -6274,7 +6274,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_v_seqlen = (__pyx_v_max_i + __pyx_v_max_j);
 
-  /* "gotoh_counts/gotoh_counts.pyx":324
+  /* "gotoh/gotoh.pyx":324
  * 
  *     seqlen = max_i + max_j
  *     if visualize:             # <<<<<<<<<<<<<<
@@ -6284,7 +6284,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_1 = (__pyx_v_visualize != 0);
   if (__pyx_t_1) {
 
-    /* "gotoh_counts/gotoh_counts.pyx":325
+    /* "gotoh/gotoh.pyx":325
  *     seqlen = max_i + max_j
  *     if visualize:
  *         import matplotlib.pyplot as plt             # <<<<<<<<<<<<<<
@@ -6302,7 +6302,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __pyx_v_plt = __pyx_t_22;
     __pyx_t_22 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":326
+    /* "gotoh/gotoh.pyx":326
  *     if visualize:
  *         import matplotlib.pyplot as plt
  *         fig, ax = plt.subplots()             # <<<<<<<<<<<<<<
@@ -6377,7 +6377,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __pyx_v_ax = __pyx_t_15;
     __pyx_t_15 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":327
+    /* "gotoh/gotoh.pyx":327
  *         import matplotlib.pyplot as plt
  *         fig, ax = plt.subplots()
  *         im = ax.imshow(score, cmap=plt.get_cmap('hot'))             # <<<<<<<<<<<<<<
@@ -6420,7 +6420,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __pyx_v_im = __pyx_t_23;
     __pyx_t_23 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":328
+    /* "gotoh/gotoh.pyx":328
  *         fig, ax = plt.subplots()
  *         im = ax.imshow(score, cmap=plt.get_cmap('hot'))
  *         fig.colorbar(im)             # <<<<<<<<<<<<<<
@@ -6446,7 +6446,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __Pyx_DECREF(__pyx_t_23); __pyx_t_23 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":329
+    /* "gotoh/gotoh.pyx":329
  *         im = ax.imshow(score, cmap=plt.get_cmap('hot'))
  *         fig.colorbar(im)
  *         plt.show()             # <<<<<<<<<<<<<<
@@ -6472,7 +6472,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
     __Pyx_DECREF(__pyx_t_23); __pyx_t_23 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":324
+    /* "gotoh/gotoh.pyx":324
  * 
  *     seqlen = max_i + max_j
  *     if visualize:             # <<<<<<<<<<<<<<
@@ -6481,7 +6481,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":331
+  /* "gotoh/gotoh.pyx":331
  *         plt.show()
  * 
  *     cdef size_t depth_i =  seqi.shape[1]             # <<<<<<<<<<<<<<
@@ -6490,7 +6490,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_v_depth_i = (__pyx_v_seqi->dimensions[1]);
 
-  /* "gotoh_counts/gotoh_counts.pyx":332
+  /* "gotoh/gotoh.pyx":332
  * 
  *     cdef size_t depth_i =  seqi.shape[1]
  *     cdef size_t depth_j =  seqj.shape[1]             # <<<<<<<<<<<<<<
@@ -6499,7 +6499,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_v_depth_j = (__pyx_v_seqj->dimensions[1]);
 
-  /* "gotoh_counts/gotoh_counts.pyx":335
+  /* "gotoh/gotoh.pyx":335
  * 
  *     cdef int score_max #, = score[:, -1].max()
  *     cdef np.ndarray[DTYPE_INT, ndim=2] alignment = np.empty((seqlen, depth_i + depth_j), dtype=np.int)             # <<<<<<<<<<<<<<
@@ -6546,7 +6546,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_39 = ((PyArrayObject *)__pyx_t_11);
   {
     __Pyx_BufFmt_StackElem __pyx_stack[1];
-    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_alignment.rcbuffer->pybuffer, (PyObject*)__pyx_t_39, &__Pyx_TypeInfo_nn___pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_INT, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
+    if (unlikely(__Pyx_GetBufferAndValidate(&__pyx_pybuffernd_alignment.rcbuffer->pybuffer, (PyObject*)__pyx_t_39, &__Pyx_TypeInfo_nn___pyx_t_5gotoh_5gotoh_DTYPE_INT, PyBUF_FORMAT| PyBUF_STRIDES, 2, 0, __pyx_stack) == -1)) {
       __pyx_v_alignment = ((PyArrayObject *)Py_None); __Pyx_INCREF(Py_None); __pyx_pybuffernd_alignment.rcbuffer->pybuffer.buf = NULL;
       __PYX_ERR(0, 335, __pyx_L1_error)
     } else {__pyx_pybuffernd_alignment.diminfo[0].strides = __pyx_pybuffernd_alignment.rcbuffer->pybuffer.strides[0]; __pyx_pybuffernd_alignment.diminfo[0].shape = __pyx_pybuffernd_alignment.rcbuffer->pybuffer.shape[0]; __pyx_pybuffernd_alignment.diminfo[1].strides = __pyx_pybuffernd_alignment.rcbuffer->pybuffer.strides[1]; __pyx_pybuffernd_alignment.diminfo[1].shape = __pyx_pybuffernd_alignment.rcbuffer->pybuffer.shape[1];
@@ -6556,7 +6556,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_v_alignment = ((PyArrayObject *)__pyx_t_11);
   __pyx_t_11 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":337
+  /* "gotoh/gotoh.pyx":337
  *     cdef np.ndarray[DTYPE_INT, ndim=2] alignment = np.empty((seqlen, depth_i + depth_j), dtype=np.int)
  * 
  *     cdef int alignment_index = seqlen - 1             # <<<<<<<<<<<<<<
@@ -6565,7 +6565,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_v_alignment_index = (__pyx_v_seqlen - 1);
 
-  /* "gotoh_counts/gotoh_counts.pyx":339
+  /* "gotoh/gotoh.pyx":339
  *     cdef int alignment_index = seqlen - 1
  * 
  *     cdef int GAP = -1             # <<<<<<<<<<<<<<
@@ -6574,7 +6574,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_v_GAP = -1;
 
-  /* "gotoh_counts/gotoh_counts.pyx":340
+  /* "gotoh/gotoh.pyx":340
  * 
  *     cdef int GAP = -1
  *     p = pointer[i, j]             # <<<<<<<<<<<<<<
@@ -6583,9 +6583,9 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
   __pyx_t_10 = __pyx_v_i;
   __pyx_t_9 = __pyx_v_j;
-  __pyx_v_p = (*__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_10, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_9, __pyx_pybuffernd_pointer.diminfo[1].strides));
+  __pyx_v_p = (*__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_10, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_9, __pyx_pybuffernd_pointer.diminfo[1].strides));
 
-  /* "gotoh_counts/gotoh_counts.pyx":342
+  /* "gotoh/gotoh.pyx":342
  *     p = pointer[i, j]
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -6595,7 +6595,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "gotoh_counts/gotoh_counts.pyx":343
+    /* "gotoh/gotoh.pyx":343
  * 
  *     if flip:
  *         indexes_i = np.arange(depth_i)             # <<<<<<<<<<<<<<
@@ -6628,7 +6628,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __pyx_v_indexes_i = __pyx_t_11;
     __pyx_t_11 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":344
+    /* "gotoh/gotoh.pyx":344
  *     if flip:
  *         indexes_i = np.arange(depth_i)
  *         indexes_j = np.arange(depth_i,depth_i+depth_j)             # <<<<<<<<<<<<<<
@@ -6696,7 +6696,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __pyx_v_indexes_j = __pyx_t_11;
     __pyx_t_11 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":342
+    /* "gotoh/gotoh.pyx":342
  *     p = pointer[i, j]
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -6706,7 +6706,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     goto __pyx_L27;
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":346
+  /* "gotoh/gotoh.pyx":346
  *         indexes_j = np.arange(depth_i,depth_i+depth_j)
  *     else:
  *         indexes_j = np.arange(depth_j)             # <<<<<<<<<<<<<<
@@ -6740,7 +6740,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __pyx_v_indexes_j = __pyx_t_11;
     __pyx_t_11 = 0;
 
-    /* "gotoh_counts/gotoh_counts.pyx":347
+    /* "gotoh/gotoh.pyx":347
  *     else:
  *         indexes_j = np.arange(depth_j)
  *         indexes_i = np.arange(depth_j,depth_i+depth_j)             # <<<<<<<<<<<<<<
@@ -6810,7 +6810,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   }
   __pyx_L27:;
 
-  /* "gotoh_counts/gotoh_counts.pyx":349
+  /* "gotoh/gotoh.pyx":349
  *         indexes_i = np.arange(depth_j,depth_i+depth_j)
  * 
  *     while p != NONE:             # <<<<<<<<<<<<<<
@@ -6818,20 +6818,20 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  *             i -= 1
  */
   while (1) {
-    __pyx_t_1 = ((__pyx_v_p != __pyx_v_12gotoh_counts_12gotoh_counts_NONE) != 0);
+    __pyx_t_1 = ((__pyx_v_p != __pyx_v_5gotoh_5gotoh_NONE) != 0);
     if (!__pyx_t_1) break;
 
-    /* "gotoh_counts/gotoh_counts.pyx":350
+    /* "gotoh/gotoh.pyx":350
  * 
  *     while p != NONE:
  *         if p == DIAG:             # <<<<<<<<<<<<<<
  *             i -= 1
  *             j -= 1
  */
-    __pyx_t_1 = ((__pyx_v_p == __pyx_v_12gotoh_counts_12gotoh_counts_DIAG) != 0);
+    __pyx_t_1 = ((__pyx_v_p == __pyx_v_5gotoh_5gotoh_DIAG) != 0);
     if (__pyx_t_1) {
 
-      /* "gotoh_counts/gotoh_counts.pyx":351
+      /* "gotoh/gotoh.pyx":351
  *     while p != NONE:
  *         if p == DIAG:
  *             i -= 1             # <<<<<<<<<<<<<<
@@ -6840,7 +6840,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
       __pyx_v_i = (__pyx_v_i - 1);
 
-      /* "gotoh_counts/gotoh_counts.pyx":352
+      /* "gotoh/gotoh.pyx":352
  *         if p == DIAG:
  *             i -= 1
  *             j -= 1             # <<<<<<<<<<<<<<
@@ -6849,7 +6849,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
       __pyx_v_j = (__pyx_v_j - 1);
 
-      /* "gotoh_counts/gotoh_counts.pyx":354
+      /* "gotoh/gotoh.pyx":354
  *             j -= 1
  * 
  *             alignment[alignment_index,indexes_i] = seqi[i,:]             # <<<<<<<<<<<<<<
@@ -6883,7 +6883,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __Pyx_DECREF(__pyx_t_23); __pyx_t_23 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "gotoh_counts/gotoh_counts.pyx":355
+      /* "gotoh/gotoh.pyx":355
  * 
  *             alignment[alignment_index,indexes_i] = seqi[i,:]
  *             alignment[alignment_index,indexes_j] = seqj[j,:]             # <<<<<<<<<<<<<<
@@ -6917,7 +6917,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "gotoh_counts/gotoh_counts.pyx":350
+      /* "gotoh/gotoh.pyx":350
  * 
  *     while p != NONE:
  *         if p == DIAG:             # <<<<<<<<<<<<<<
@@ -6927,17 +6927,17 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       goto __pyx_L30;
     }
 
-    /* "gotoh_counts/gotoh_counts.pyx":356
+    /* "gotoh/gotoh.pyx":356
  *             alignment[alignment_index,indexes_i] = seqi[i,:]
  *             alignment[alignment_index,indexes_j] = seqj[j,:]
  *         elif p == LEFT:             # <<<<<<<<<<<<<<
  *             j -= 1
  * 
  */
-    __pyx_t_1 = ((__pyx_v_p == __pyx_v_12gotoh_counts_12gotoh_counts_LEFT) != 0);
+    __pyx_t_1 = ((__pyx_v_p == __pyx_v_5gotoh_5gotoh_LEFT) != 0);
     if (__pyx_t_1) {
 
-      /* "gotoh_counts/gotoh_counts.pyx":357
+      /* "gotoh/gotoh.pyx":357
  *             alignment[alignment_index,indexes_j] = seqj[j,:]
  *         elif p == LEFT:
  *             j -= 1             # <<<<<<<<<<<<<<
@@ -6946,7 +6946,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
       __pyx_v_j = (__pyx_v_j - 1);
 
-      /* "gotoh_counts/gotoh_counts.pyx":359
+      /* "gotoh/gotoh.pyx":359
  *             j -= 1
  * 
  *             alignment[alignment_index,indexes_i] = GAP             # <<<<<<<<<<<<<<
@@ -6969,7 +6969,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __Pyx_DECREF(__pyx_t_23); __pyx_t_23 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "gotoh_counts/gotoh_counts.pyx":360
+      /* "gotoh/gotoh.pyx":360
  * 
  *             alignment[alignment_index,indexes_i] = GAP
  *             alignment[alignment_index,indexes_j] = seqj[j,:]             # <<<<<<<<<<<<<<
@@ -7003,7 +7003,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "gotoh_counts/gotoh_counts.pyx":356
+      /* "gotoh/gotoh.pyx":356
  *             alignment[alignment_index,indexes_i] = seqi[i,:]
  *             alignment[alignment_index,indexes_j] = seqj[j,:]
  *         elif p == LEFT:             # <<<<<<<<<<<<<<
@@ -7013,17 +7013,17 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       goto __pyx_L30;
     }
 
-    /* "gotoh_counts/gotoh_counts.pyx":361
+    /* "gotoh/gotoh.pyx":361
  *             alignment[alignment_index,indexes_i] = GAP
  *             alignment[alignment_index,indexes_j] = seqj[j,:]
  *         elif p == UP:             # <<<<<<<<<<<<<<
  *             i -= 1
  *             alignment[alignment_index,indexes_i] = seqi[i,:]
  */
-    __pyx_t_1 = ((__pyx_v_p == __pyx_v_12gotoh_counts_12gotoh_counts_UP) != 0);
+    __pyx_t_1 = ((__pyx_v_p == __pyx_v_5gotoh_5gotoh_UP) != 0);
     if (likely(__pyx_t_1)) {
 
-      /* "gotoh_counts/gotoh_counts.pyx":362
+      /* "gotoh/gotoh.pyx":362
  *             alignment[alignment_index,indexes_j] = seqj[j,:]
  *         elif p == UP:
  *             i -= 1             # <<<<<<<<<<<<<<
@@ -7032,7 +7032,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
       __pyx_v_i = (__pyx_v_i - 1);
 
-      /* "gotoh_counts/gotoh_counts.pyx":363
+      /* "gotoh/gotoh.pyx":363
  *         elif p == UP:
  *             i -= 1
  *             alignment[alignment_index,indexes_i] = seqi[i,:]             # <<<<<<<<<<<<<<
@@ -7066,7 +7066,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __Pyx_DECREF(__pyx_t_23); __pyx_t_23 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "gotoh_counts/gotoh_counts.pyx":364
+      /* "gotoh/gotoh.pyx":364
  *             i -= 1
  *             alignment[alignment_index,indexes_i] = seqi[i,:]
  *             alignment[alignment_index,indexes_j] = GAP             # <<<<<<<<<<<<<<
@@ -7089,7 +7089,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       __Pyx_DECREF(__pyx_t_22); __pyx_t_22 = 0;
       __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
 
-      /* "gotoh_counts/gotoh_counts.pyx":361
+      /* "gotoh/gotoh.pyx":361
  *             alignment[alignment_index,indexes_i] = GAP
  *             alignment[alignment_index,indexes_j] = seqj[j,:]
  *         elif p == UP:             # <<<<<<<<<<<<<<
@@ -7099,7 +7099,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
       goto __pyx_L30;
     }
 
-    /* "gotoh_counts/gotoh_counts.pyx":366
+    /* "gotoh/gotoh.pyx":366
  *             alignment[alignment_index,indexes_j] = GAP
  *         else:
  *             raise Exception('Error with pointer: %i', p)             # <<<<<<<<<<<<<<
@@ -7126,7 +7126,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     }
     __pyx_L30:;
 
-    /* "gotoh_counts/gotoh_counts.pyx":367
+    /* "gotoh/gotoh.pyx":367
  *         else:
  *             raise Exception('Error with pointer: %i', p)
  *         alignment_index -= 1             # <<<<<<<<<<<<<<
@@ -7135,7 +7135,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
     __pyx_v_alignment_index = (__pyx_v_alignment_index - 1);
 
-    /* "gotoh_counts/gotoh_counts.pyx":368
+    /* "gotoh/gotoh.pyx":368
  *             raise Exception('Error with pointer: %i', p)
  *         alignment_index -= 1
  *         p = pointer[i, j]             # <<<<<<<<<<<<<<
@@ -7144,10 +7144,10 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
  */
     __pyx_t_9 = __pyx_v_i;
     __pyx_t_10 = __pyx_v_j;
-    __pyx_v_p = (*__Pyx_BufPtrStrided2d(__pyx_t_12gotoh_counts_12gotoh_counts_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_10, __pyx_pybuffernd_pointer.diminfo[1].strides));
+    __pyx_v_p = (*__Pyx_BufPtrStrided2d(__pyx_t_5gotoh_5gotoh_DTYPE_UINT *, __pyx_pybuffernd_pointer.rcbuffer->pybuffer.buf, __pyx_t_9, __pyx_pybuffernd_pointer.diminfo[0].strides, __pyx_t_10, __pyx_pybuffernd_pointer.diminfo[1].strides));
   }
 
-  /* "gotoh_counts/gotoh_counts.pyx":370
+  /* "gotoh/gotoh.pyx":370
  *         p = pointer[i, j]
  * 
  *     return alignment[alignment_index+1:,:]             # <<<<<<<<<<<<<<
@@ -7173,10 +7173,10 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
   __pyx_t_22 = 0;
   goto __pyx_L0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":209
+  /* "gotoh/gotoh.pyx":209
  * @cython.boundscheck(False)
  * @cython.nonecheck(False)
- * def align(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):             # <<<<<<<<<<<<<<
+ * def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):             # <<<<<<<<<<<<<<
  *     """
  *     perform a global sequence alignment (needleman-wunsch) for multiple sequences
  */
@@ -7203,7 +7203,7 @@ static PyObject *__pyx_pf_12gotoh_counts_12gotoh_counts_8align(CYTHON_UNUSED PyO
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_seqi.rcbuffer->pybuffer);
     __Pyx_SafeReleaseBuffer(&__pyx_pybuffernd_seqj.rcbuffer->pybuffer);
   __Pyx_ErrRestore(__pyx_type, __pyx_value, __pyx_tb);}
-  __Pyx_AddTraceback("gotoh_counts.gotoh_counts.align", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("gotoh.gotoh.msa", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   goto __pyx_L2;
   __pyx_L0:;
@@ -8084,27 +8084,27 @@ static CYTHON_INLINE int __pyx_f_5numpy_import_ufunc(void) {
 }
 
 static PyMethodDef __pyx_methods[] = {
-  {"counts", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12gotoh_counts_12gotoh_counts_1counts, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12gotoh_counts_12gotoh_counts_counts},
-  {"score", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12gotoh_counts_12gotoh_counts_3score, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12gotoh_counts_12gotoh_counts_2score},
-  {"nonmatches", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12gotoh_counts_12gotoh_counts_5nonmatches, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12gotoh_counts_12gotoh_counts_4nonmatches},
-  {"weighted_nonmatches", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_12gotoh_counts_12gotoh_counts_7weighted_nonmatches, METH_VARARGS|METH_KEYWORDS, __pyx_doc_12gotoh_counts_12gotoh_counts_6weighted_nonmatches},
+  {"counts", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_5gotoh_5gotoh_1counts, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5gotoh_5gotoh_counts},
+  {"score", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_5gotoh_5gotoh_3score, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5gotoh_5gotoh_2score},
+  {"nonmatches", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_5gotoh_5gotoh_5nonmatches, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5gotoh_5gotoh_4nonmatches},
+  {"weighted_nonmatches", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_5gotoh_5gotoh_7weighted_nonmatches, METH_VARARGS|METH_KEYWORDS, __pyx_doc_5gotoh_5gotoh_6weighted_nonmatches},
   {0, 0, 0, 0}
 };
 
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_gotoh_counts(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_gotoh(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_gotoh_counts},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_gotoh},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "gotoh_counts",
+    "gotoh",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -8141,7 +8141,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s__4, __pyx_k__4, sizeof(__pyx_k__4), 0, 0, 1, 1},
   {&__pyx_n_s_agap_i, __pyx_k_agap_i, sizeof(__pyx_k_agap_i), 0, 0, 1, 1},
   {&__pyx_n_s_agap_j, __pyx_k_agap_j, sizeof(__pyx_k_agap_j), 0, 0, 1, 1},
-  {&__pyx_n_s_align, __pyx_k_align, sizeof(__pyx_k_align), 0, 0, 1, 1},
   {&__pyx_n_s_alignment, __pyx_k_alignment, sizeof(__pyx_k_alignment), 0, 0, 1, 1},
   {&__pyx_n_s_alignment_index, __pyx_k_alignment_index, sizeof(__pyx_k_alignment_index), 0, 0, 1, 1},
   {&__pyx_n_s_arange, __pyx_k_arange, sizeof(__pyx_k_arange), 0, 0, 1, 1},
@@ -8166,8 +8165,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_gap_open, __pyx_k_gap_open, sizeof(__pyx_k_gap_open), 0, 0, 1, 1},
   {&__pyx_kp_u_gap_open_must_be_0, __pyx_k_gap_open_must_be_0, sizeof(__pyx_k_gap_open_must_be_0), 0, 1, 0, 0},
   {&__pyx_n_s_get_cmap, __pyx_k_get_cmap, sizeof(__pyx_k_get_cmap), 0, 0, 1, 1},
-  {&__pyx_n_s_gotoh_counts_gotoh_counts, __pyx_k_gotoh_counts_gotoh_counts, sizeof(__pyx_k_gotoh_counts_gotoh_counts), 0, 0, 1, 1},
-  {&__pyx_kp_s_gotoh_counts_gotoh_counts_pyx, __pyx_k_gotoh_counts_gotoh_counts_pyx, sizeof(__pyx_k_gotoh_counts_gotoh_counts_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_gotoh_gotoh, __pyx_k_gotoh_gotoh, sizeof(__pyx_k_gotoh_gotoh), 0, 0, 1, 1},
+  {&__pyx_kp_s_gotoh_gotoh_pyx, __pyx_k_gotoh_gotoh_pyx, sizeof(__pyx_k_gotoh_gotoh_pyx), 0, 0, 1, 0},
   {&__pyx_n_u_hot, __pyx_k_hot, sizeof(__pyx_k_hot), 0, 1, 0, 1},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
   {&__pyx_n_s_im, __pyx_k_im, sizeof(__pyx_k_im), 0, 0, 1, 1},
@@ -8186,6 +8185,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_max_i, __pyx_k_max_i, sizeof(__pyx_k_max_i), 0, 0, 1, 1},
   {&__pyx_n_s_max_j, __pyx_k_max_j, sizeof(__pyx_k_max_j), 0, 0, 1, 1},
   {&__pyx_n_s_mismatch, __pyx_k_mismatch, sizeof(__pyx_k_mismatch), 0, 0, 1, 1},
+  {&__pyx_n_s_msa, __pyx_k_msa, sizeof(__pyx_k_msa), 0, 0, 1, 1},
   {&__pyx_n_s_myscore, __pyx_k_myscore, sizeof(__pyx_k_myscore), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_np, __pyx_k_np, sizeof(__pyx_k_np), 0, 0, 1, 1},
@@ -8228,7 +8228,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "gotoh_counts/gotoh_counts.pyx":75
+  /* "gotoh/gotoh.pyx":75
  *     score[0, 0] = 0
  * 
  *     pointer[0, 1:] = LEFT             # <<<<<<<<<<<<<<
@@ -8242,7 +8242,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "gotoh_counts/gotoh_counts.pyx":76
+  /* "gotoh/gotoh.pyx":76
  * 
  *     pointer[0, 1:] = LEFT
  *     pointer[1:, 0] = UP             # <<<<<<<<<<<<<<
@@ -8253,7 +8253,7 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "gotoh_counts/gotoh_counts.pyx":354
+  /* "gotoh/gotoh.pyx":354
  *             j -= 1
  * 
  *             alignment[alignment_index,indexes_i] = seqi[i,:]             # <<<<<<<<<<<<<<
@@ -8286,17 +8286,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__7);
   __Pyx_GIVEREF(__pyx_tuple__7);
 
-  /* "gotoh_counts/gotoh_counts.pyx":209
+  /* "gotoh/gotoh.pyx":209
  * @cython.boundscheck(False)
  * @cython.nonecheck(False)
- * def align(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):             # <<<<<<<<<<<<<<
+ * def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):             # <<<<<<<<<<<<<<
  *     """
  *     perform a global sequence alignment (needleman-wunsch) for multiple sequences
  */
   __pyx_tuple__8 = PyTuple_Pack(41, __pyx_n_s_seqj, __pyx_n_s_seqi, __pyx_n_s_gap_open, __pyx_n_s_gap_extend, __pyx_n_s_matrix, __pyx_n_s_visualize, __pyx_n_s_flip, __pyx_n_s_max_j, __pyx_n_s_max_i, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_seqlen, __pyx_n_s_p, __pyx_n_s_diag_score, __pyx_n_s_up_score, __pyx_n_s_left_score, __pyx_n_s_tscore, __pyx_n_s_zero, __pyx_n_s_one, __pyx_n_s_agap_i, __pyx_n_s_agap_j, __pyx_n_s_score, __pyx_n_s_pointer, __pyx_n_s_scoring_matrix, __pyx_n_s_ci, __pyx_n_s_cj, __pyx_n_s_token_i, __pyx_n_s_token_j, __pyx_n_s_myscore, __pyx_n_s_plt, __pyx_n_s_fig, __pyx_n_s_ax, __pyx_n_s_im, __pyx_n_s_depth_i, __pyx_n_s_depth_j, __pyx_n_s_score_max, __pyx_n_s_alignment, __pyx_n_s_alignment_index, __pyx_n_s_GAP, __pyx_n_s_indexes_i, __pyx_n_s_indexes_j); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(6, 0, 41, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_gotoh_counts_gotoh_counts_pyx, __pyx_n_s_align, 209, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(6, 0, 41, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_gotoh_gotoh_pyx, __pyx_n_s_msa, 209, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -8428,11 +8428,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initgotoh_counts(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initgotoh_counts(void)
+__Pyx_PyMODINIT_FUNC initgotoh(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initgotoh(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_gotoh_counts(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_gotoh_counts(void)
+__Pyx_PyMODINIT_FUNC PyInit_gotoh(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_gotoh(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -8499,7 +8499,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_gotoh_counts(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_gotoh(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -8512,7 +8512,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_gotoh_counts(PyObject *__pyx_pyini
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'gotoh_counts' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'gotoh' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -8527,7 +8527,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_gotoh_counts(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_gotoh(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -8566,7 +8566,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("gotoh_counts", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("gotoh", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -8584,14 +8584,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_gotoh_counts__gotoh_counts) {
+  if (__pyx_module_is_main_gotoh__gotoh) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "gotoh_counts.gotoh_counts")) {
-      if (unlikely(PyDict_SetItemString(modules, "gotoh_counts.gotoh_counts", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "gotoh.gotoh")) {
+      if (unlikely(PyDict_SetItemString(modules, "gotoh.gotoh", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -8612,7 +8612,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "gotoh_counts/gotoh_counts.pyx":5
+  /* "gotoh/gotoh.pyx":5
  * # cython: c_string_type=unicode, c_string_encoding=utf8
  * # cython: language_level=3
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -8624,7 +8624,7 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":8
+  /* "gotoh/gotoh.pyx":8
  * cimport numpy as np
  * 
  * import faulthandler; faulthandler.enable()             # <<<<<<<<<<<<<<
@@ -8645,31 +8645,31 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":28
+  /* "gotoh/gotoh.pyx":28
  * ctypedef np.int8_t DTYPE_BOOL
  * 
  * cdef size_t UP = 1, LEFT = 2, DIAG = 3, NONE = 4             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_v_12gotoh_counts_12gotoh_counts_UP = 1;
-  __pyx_v_12gotoh_counts_12gotoh_counts_LEFT = 2;
-  __pyx_v_12gotoh_counts_12gotoh_counts_DIAG = 3;
-  __pyx_v_12gotoh_counts_12gotoh_counts_NONE = 4;
+  __pyx_v_5gotoh_5gotoh_UP = 1;
+  __pyx_v_5gotoh_5gotoh_LEFT = 2;
+  __pyx_v_5gotoh_5gotoh_DIAG = 3;
+  __pyx_v_5gotoh_5gotoh_NONE = 4;
 
-  /* "gotoh_counts/gotoh_counts.pyx":209
+  /* "gotoh/gotoh.pyx":209
  * @cython.boundscheck(False)
  * @cython.nonecheck(False)
- * def align(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):             # <<<<<<<<<<<<<<
+ * def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, float gap_open=-1, float gap_extend=-1, object matrix=None, int visualize=0):             # <<<<<<<<<<<<<<
  *     """
  *     perform a global sequence alignment (needleman-wunsch) for multiple sequences
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_12gotoh_counts_12gotoh_counts_9align, NULL, __pyx_n_s_gotoh_counts_gotoh_counts); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_5gotoh_5gotoh_9msa, NULL, __pyx_n_s_gotoh_gotoh); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_align, __pyx_t_1) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_msa, __pyx_t_1) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "gotoh_counts/gotoh_counts.pyx":1
+  /* "gotoh/gotoh.pyx":1
  * # cython: boundscheck=False, wraparound=False             # <<<<<<<<<<<<<<
  * # cython: cdivision=False
  * # cython: c_string_type=unicode, c_string_encoding=utf8
@@ -8695,11 +8695,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init gotoh_counts.gotoh_counts", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init gotoh.gotoh", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init gotoh_counts.gotoh_counts");
+    PyErr_SetString(PyExc_ImportError, "init gotoh.gotoh");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();
