@@ -32,7 +32,7 @@ setup(
         include_dirs=[numpy.get_include()]),
     ],
     name="gotoh",
-    version="0.0.4",
+    version="0.0.5",
     author="Robert Turnbull",
     author_email="rob@robturnbull.com",
     description="Aligns two sequences and returns the number of characters which match, mismatch, open gaps or extend gaps.",

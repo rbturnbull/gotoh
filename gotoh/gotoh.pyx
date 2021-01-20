@@ -260,18 +260,18 @@ def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, floa
             agap_j[j] = one
             cj = set(seqj[<size_t>(j - 1)])
 
-            if matrix is None:
-                tscore = 1 if (ci & cj) else -1 # Most basic function
-            else:
-                tscore = np.NINF
-                for token_i in ci:
-                    for token_j in cj:
-                        if token_i >= token_j:
-                            myscore = scoring_matrix[ token_i,token_j ]
-                        else:
-                            myscore = scoring_matrix[ token_j,token_i ]
-                        
-                        tscore = max(tscore,myscore)
+            tscore = 0.0
+            for token_i in ci:
+                for token_j in cj:
+                    if matrix is None:
+                        myscore = 1 if token_i == token_j else -1
+                    if token_i >= token_j:
+                        myscore = scoring_matrix[ token_i,token_j ]
+                    else:
+                        myscore = scoring_matrix[ token_j,token_i ]
+                    
+                    tscore += myscore
+            tscore /= len(ci)*len(cj) # See eq 8 in Spencer and Howe, 2004 (p. 262)
 
 
             diag_score = score[<size_t>(i - 1), <size_t>(j - 1)] + tscore
