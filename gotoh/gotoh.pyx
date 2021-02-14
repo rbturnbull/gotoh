@@ -210,11 +210,8 @@ def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, floa
     """
     perform a global sequence alignment (needleman-wunsch) for multiple sequences
     """
-    return 
     cdef bint flip = 0
 
-    print("HACKHACK")
-    return
     if seqj == None:
         raise ValueError(f"seqj is empty")
     if seqi == None:
