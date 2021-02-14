@@ -8,6 +8,14 @@ class GotohMSATest(unittest.TestCase):
     def setUp(self):
         pass
     
+
+    # def test_null_seqi( self ):
+    #     array =  np.asarray( [1,2,3] )
+    #     array = np.expand_dims(array, axis=1)
+
+    #     alignment = msa(array,None, gap_open=0.0)
+
+
     def test_seq_to_seq( self ):
         x =  np.asarray( [1,2,3] )
         x = np.expand_dims(x, axis=1)

@@ -210,10 +210,20 @@ def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, floa
     """
     perform a global sequence alignment (needleman-wunsch) for multiple sequences
     """
+    return 
     cdef bint flip = 0
-    
+
+    print("HACKHACK")
+    return
+    if seqj == None:
+        raise ValueError(f"seqj is empty")
+    if seqi == None:
+        raise ValueError(f"seqi is empty")
+
     cdef size_t max_j = seqj.shape[0]
     cdef size_t max_i = seqi.shape[0]
+
+
     if max_i == max_j == 0:
         return None
 
@@ -241,6 +251,7 @@ def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, floa
 
     cdef np.ndarray[np.float32_t, ndim=2] scoring_matrix = matrix
   
+
     pointer[0, 0] = NONE
     score[0, 0] = 0
     
@@ -251,6 +262,7 @@ def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, floa
     score[1:, 0] = gap_open + gap_extend * np.arange(0, max_i, dtype=np.float32)
 
     agap_i[0] = zero
+
 
     for i in range(1, max_i + 1):
         ci = set(seqi[<size_t>(i - 1)])
