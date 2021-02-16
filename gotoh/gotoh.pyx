@@ -212,17 +212,17 @@ def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, floa
     """
     cdef bint flip = 0
 
-    if seqj == None:
-        raise ValueError(f"seqj is empty")
-    if seqi == None:
-        raise ValueError(f"seqi is empty")
+    # if seqj == None:
+    #     raise ValueError(f"seqj is null")
+    # if seqi == None:
+    #     raise ValueError(f"seqi is null")
 
     cdef size_t max_j = seqj.shape[0]
     cdef size_t max_i = seqi.shape[0]
 
 
     if max_i == max_j == 0:
-        return None
+        return np.empty( shape=(0, 0), dtype=int )
 
     if max_j > max_i:
         flip = 1
