@@ -222,7 +222,7 @@ def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, floa
 
 
     if max_i == max_j == 0:
-        return np.empty( shape=(0, 0), dtype=int )
+        return np.empty( shape=(0, seqi.shape[1]+seqj.shape[1] ), dtype=int )
 
     if max_j > max_i:
         flip = 1
