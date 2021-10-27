@@ -2,7 +2,6 @@ attrs==21.2.0
 black==21.9b0
 click==8.0.3
 Cython==0.29.21
-gotoh==0.0.7
 iniconfig==1.1.1
 mypy-extensions==0.4.3
 numpy==1.19.1
