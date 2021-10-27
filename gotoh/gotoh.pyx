@@ -282,7 +282,7 @@ def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, floa
                         myscore = gap_open if agap_j[<size_t>(j - 1)] == zero else gap_extend
                     elif matrix is None:
                         myscore = 1 if token_i == token_j else -1
-                    if token_i >= token_j:
+                    elif token_i >= token_j:
                         myscore = scoring_matrix[ token_i,token_j ]
                     else:
                         myscore = scoring_matrix[ token_j,token_i ]
@@ -469,7 +469,7 @@ def pointers(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi,
                         myscore = gap_open if agap_j[<size_t>(j - 1)] == zero else gap_extend
                     elif matrix is None:
                         myscore = 1 if token_i == token_j else -1
-                    if token_i >= token_j:
+                    elif token_i >= token_j:
                         myscore = scoring_matrix[ token_i,token_j ]
                     else:
                         myscore = scoring_matrix[ token_j,token_i ]
