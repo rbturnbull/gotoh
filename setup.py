@@ -23,6 +23,7 @@ setup(
     ],
     setup_requires=[
         # Setuptools 18.0 properly handles Cython extensions.
+        'wheel',
         'setuptools>=18.0',
         'cython',
     ],
