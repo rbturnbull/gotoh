@@ -16,7 +16,6 @@ cdef extern from "Python.h":
     int _PyString_Resize(PyObject **, size_t)
     char * PyUnicode_AsUTF8(PyObject *)
 
-
 cimport cython
 
 ctypedef np.int_t DTYPE_t
@@ -353,7 +352,7 @@ def msa(np.ndarray[DTYPE_t, ndim=2] seqj, np.ndarray[DTYPE_t, ndim=2] seqi, floa
     cdef size_t depth_j =  seqj.shape[1]
 
     cdef int score_max #, = score[:, -1].max()
-    cdef np.ndarray[DTYPE_INT, ndim=2] alignment = np.empty((seqlen, depth_i + depth_j), dtype=np.int)
+    cdef np.ndarray[DTYPE_INT, ndim=2] alignment = np.empty((seqlen, depth_i + depth_j), dtype=int)
     
     cdef int alignment_index = seqlen - 1
     
