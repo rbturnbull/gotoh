@@ -1,3 +1,4 @@
+# adapted from https://blagovdaryu.hashnode.dev/tremendously-speed-up-python-code-with-cython-and-package-it-with-poetry
 import os
 import shutil
 from distutils.core import Distribution, Extension
