@@ -7,7 +7,6 @@ cimport numpy as np
 
 import faulthandler; faulthandler.enable()
 
-
 cdef extern from "stdlib.h":
     ctypedef unsigned int size_t
 cdef extern from "Python.h":
