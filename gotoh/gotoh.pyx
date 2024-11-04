@@ -17,10 +17,9 @@ cdef extern from "Python.h":
 
 cimport cython
 
-ctypedef np.int_t DTYPE_t
-
-ctypedef np.int_t DTYPE_INT
-ctypedef np.uint_t DTYPE_UINT
+ctypedef np.int64_t DTYPE_t
+ctypedef np.int64_t DTYPE_INT
+ctypedef np.uint64_t DTYPE_UINT
 ctypedef np.int8_t DTYPE_BOOL
 
 cdef size_t UP = 1, LEFT = 2, DIAG = 3, NONE = 4
