@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gotoh"
-version = "0.1.5"
+version = "0.1.6"
 description = "Sequence Alignment with different penalties for opening gaps and extending them."
 authors = ["Robert Turnbull <robert.turnbull@unimelb.edu.au>"]
 license = "Apache-2.0"
