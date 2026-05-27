@@ -13,8 +13,14 @@ gotoh
 
 .. end-badges
 
+To install, run:
 
-Performs a global sequence alignment (Needleman-Wunsch) with affine gap
+.. code-block:: bash
+
+    pip install gotoh
+
+
+This package performs a global sequence alignment (Needleman-Wunsch) with affine gap
 penalties (Gotoh). It returns a tuple with the number of characters that match,
 mismatch, open gaps and extend gaps. The scores/penalties are given as
 arguments and the defaults correspond to the basic Levenshtein distance.
@@ -22,7 +28,6 @@ arguments and the defaults correspond to the basic Levenshtein distance.
 It can also produce a multiple sequence alignment.
 
 Documentation and code clean up to come.
-
 
 Credits
 ==================================
