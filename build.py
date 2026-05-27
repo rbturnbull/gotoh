@@ -2,12 +2,18 @@
 import os
 import shutil
 from distutils.core import Distribution, Extension
+from pathlib import Path
 
 from Cython.Build import build_ext, cythonize
 import numpy as np
 
 
 cython_dir = "gotoh"
+for built_extension in Path(cython_dir).glob("gotoh*.so"):
+    built_extension.unlink()
+for built_extension in Path(cython_dir).glob("gotoh*.pyd"):
+    built_extension.unlink()
+
 extension = Extension(
     "gotoh.gotoh",
     [

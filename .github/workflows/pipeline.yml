@@ -25,3 +25,10 @@ jobs:
       run: |
         poetry env info
         poetry run pytest
+    - name: Test package install
+      run: |
+        poetry build
+        python -m venv /tmp/gotoh-package-test
+        /tmp/gotoh-package-test/bin/python -m pip install dist/gotoh-*.tar.gz
+        cd /tmp
+        /tmp/gotoh-package-test/bin/python -c "import gotoh; print(gotoh.__file__)"

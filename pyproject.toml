@@ -14,6 +14,10 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Scientific/Engineering :: Bio-Informatics"
 ]
+include = [
+    { path = "gotoh/gotoh*.so", format = "wheel" },
+    { path = "gotoh/gotoh*.pyd", format = "wheel" },
+]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.14"
